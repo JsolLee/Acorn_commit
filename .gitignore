@@ -1,11 +1,8 @@
 HELP.md
 .metadata
-bin/
 tmp/
 .gradle
-build/
 gradle/
-.settings
 
 
 # Compiled class file

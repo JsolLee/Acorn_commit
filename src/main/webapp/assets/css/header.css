@@ -1,0 +1,18 @@
+.header a {
+    font-weight: bold;
+}
+.header .navbar-brand{
+    font-size : large;
+}
+.header .navbar{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.header .navbar-nav > li{
+    padding-left:10px;
+    padding-right:10px;
+    font-size : 20px;
+}
+.header .dropdown-menu{
+    padding-top : 30px;
+}

@@ -1,0 +1,22 @@
+/* user_del.css */
+.userout {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f5f5f5;
+    width: 300px;
+}
+
+/* 중앙 정렬된 내용을 포함하는 컨테이너 요소의 스타일 */
+.mid {
+    margin-top: 20px;
+}
+
+/* 회원 탈퇴 확인용 체크박스 스타일 */
+input[type="checkbox"] {
+    margin-right: 5px;
+}

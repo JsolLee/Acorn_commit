@@ -1,0 +1,165 @@
+.top {
+  line-height: 0.2; 
+}
+
+.top .Interested_company {
+  border: 1.7px solid rgb(100, 100, 255);
+  border-radius: 4px;
+  font-size: 13px;
+  padding: 3px 5px 5px; 
+  text-decoration: none; 
+  display: inline-block;
+}
+
+.top .Interested_company::before {
+  content: " ";
+  display: inline-block; 
+  width: 13px;
+  height: 13px;
+  background-image: url('../img/heart.png');
+  background-size: cover;
+  margin-right: 2px;
+}
+
+.top .Interested_company:hover::before {
+  background-image: url('../img/redheart.png');
+}
+
+.middle {
+  margin-top: 20px;
+  position: relative;
+}
+
+.middle span {
+  font-size: 13px;
+  color: rgb(192, 192, 192);
+  position: relative;
+  display: inline-block; 
+}
+
+.middle hr {
+  width: 800px;
+  margin: 5px 10px;
+  border: 0.5px solid lightgray;
+}
+
+.middle span + hr {
+  width: 720px;
+  display: inline-block; /* 블록 요소로 변경하여 수평선으로 표시 */
+}
+
+.middle table {
+  width: 400px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+
+.middle th {
+  text-align: left;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.middle #td_left {
+  font-weight: 500;
+  color: darkgray;
+  width: 100px;
+}
+
+.middle #td_right {
+  color: deepskyblue;
+  text-align: center;
+}
+
+.middle .Work_Detail .map {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: white;
+  color: rgb(180, 221, 255);
+  border: 1px rgb(180, 221, 255) solid;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  margin-left: 10px;
+}
+
+.middle .Work_Detail .map:hover {
+  background-color: rgb(180, 221, 255);
+  transform: scale(1.1);
+  color: white;
+  font-weight: 500;
+}
+
+.middle .share {
+  border: .5px gray solid;
+  padding: 4px;
+  width: 250px; 
+  position: relative;
+  left: 550px;
+  border-radius: 90px;
+}
+
+.middle .share input {
+  margin: 0 5px;
+  border: none;
+  color: dimgrey;
+  padding: 2px 8px;
+}
+
+.middle .share .url {
+  background-color: rgb(100, 100, 255);
+  color: white;
+  border-radius: 30px;
+  font-size: 13px;
+}
+.middle .share .url:hover {
+  background-color: rgb(49, 49, 255);
+}
+
+.bottom {
+  position: relative;
+  margin: 30px 250px;
+}
+
+.bottom button{
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.bottom .visit_site {
+  background-color: rgb(100, 100, 255);
+  color: white;
+  border: none;
+}
+.bottom .visit_site:hover {
+  background-color: rgb(49, 49, 255);
+  color: white;
+  border: none;
+}
+
+.bottom .scrap {
+  background-color: white;
+  border: 1.5px solid rgb(75, 75, 255);
+}
+
+.bottom .scrap:hover {
+  background-color: rgb(232, 232, 232); 
+}
+
+.bottom .scrap::before {
+  content: " ";
+  display: inline-block; 
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/star.png');
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.bottom .scrap:hover::before {
+  background-image: url('../img/yellowstar.png');
+}

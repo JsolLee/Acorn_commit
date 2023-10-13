@@ -1,0 +1,160 @@
+.nav {
+  height: 60px;
+  border-top: 1px solid aqua;
+  border-bottom: 1px solid aqua;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+
+
+}
+
+.nav-right-item {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav_item {
+  margin-left: 10px;
+  padding: 0px 15px 0px 15px;
+  text-decoration-line: none;
+}
+
+.sub_nav {
+
+  height: 50px;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  background: rgba(0, 0, 0, .03);
+}
+
+.sub_nav_item {
+
+  padding: 0px 15px 0px 15px;
+
+
+
+}
+
+.Items1 {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:25vw;
+}
+
+.Items2 {
+  display: flex;
+  margin-top: 10px;
+  margin-left:25vw;
+}
+
+.Item1 {
+  position: relative;
+  padding: 27px 28px 36px 32px;
+  border: 1px solid #eaedf4;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.Item2 {
+  position: relative;
+  padding: 27px 28px 36px 32px;
+  border: 1px solid #eaedf4;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+.Item3 {
+  position: relative;
+  padding: 27px 28px 36px 32px;
+  border: 1px solid #eaedf4;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.Item4 {
+  position: relative;
+  padding: 27px 28px 36px 32px;
+  border: 1px solid #eaedf4;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+.Item_main {
+  display: flex;
+  margin-bottom: 24px;
+  flex: 1 0 auto;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.Item_main_btn1 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.Item_main_btn2 {
+  display: flex;
+  color: #5c667b;
+  font-size: 14px;
+  letter-spacing: -1px;
+  line-height: 20px;
+  -webkit-box-align: center;
+  align-items: center;
+
+}
+
+.item_detail {
+  width: 392px;
+  height: 156px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.link {
+  text-decoration-line: none;
+  width: 314px;
+  overflow: hidden;
+  height: 24px;
+  box-sizing: border-box;
+  color: #373f57;
+  font-size: 16px;
+  letter-spacing: -1px;
+  line-height: 24px;
+  text-overflow: ellipsis;
+
+
+}
+
+.txt_subject {
+
+  width: 449.95px;
+}
+
+
+
+.util {
+  float: right;
+  color: #8491a7;
+  font-size: 14px;
+  letter-spacing: -1px;
+  line-height: 24px;
+}

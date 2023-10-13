@@ -1,0 +1,78 @@
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+li{
+	list-style-type: none;	
+}
+
+main {
+  height: 100vh;
+  /* height: -webkit-fill-available; */
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.bi {
+  fill: currentColor;
+}
+
+.scrap-main-wrap{
+  width: 100%;
+  height: -webkit-fill-available;
+  padding: 97px 80px;
+}
+
+/* 리스트 카테고리 버튼 */
+.scrap-main-wrap .btn-group{
+  position: relative;
+  height: 37px;
+  margin: auto;
+  z-index: 0;
+}
+
+.scrap-main-wrap .btn-group .btn{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+/* 리스트 삭제 버튼 */
+.btn-outline-danger{
+  font-size: 14px;
+  width: 58px;
+  height: 30px;
+  position: absolute;
+  right: 83px;
+}
+
+/* 리스트 */
+.list-group{
+  margin-top: -1px;
+  border-top-left-radius: 0;
+}
+
+.list-group-top{
+  background-color: #639ef7;
+  border: solid 1px #639ef7;
+  padding-left: 57px;
+}
+
+.list-group-top label{
+  color: #fff;
+}
+
+.list-group-top .list-title{
+  margin-left: 48%;
+}
+
+.list-group .list-group-item label:nth-child(2){
+  padding-left: 21px;
+  margin-right: 97px;
+}
+
+.group-hidden{
+  display: none;
+}

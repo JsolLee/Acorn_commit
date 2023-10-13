@@ -1,0 +1,63 @@
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+li{
+	list-style-type: none;	
+}
+
+main {
+  height: 100vh;
+  /* height: -webkit-fill-available; */
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.bi {
+  fill: currentColor;
+}
+
+/* 비밀번호 확인 폼 */
+.password-check-wrap{
+  /* border: solid 10px #639ef7; */
+  height: 88%;
+  width: 100%;
+  margin: auto;
+}
+
+.password-check-wrap .password-check-form{
+  width: fit-content;
+  height: 50%;
+  margin: auto;
+  padding: 30px;
+}
+
+.password-check-wrap .password-check-form h3{
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.password-check-wrap .password-check-form .check-content{
+  width: 100px;
+}
+
+.password-check-wrap .password-check-form .pw-input{
+  width: 300px;
+}
+
+.password-check-wrap .password-check-form .user-check-btn{
+  margin-top: 37px;
+}
+
+.password-check-wrap .password-check-form .user-check-btn button{
+  width: 100%;
+}
+
+/* user_edit.html에서 사용 */
+.password-check-wrap .password-check-form .edit-content{
+  width: 150px;
+}

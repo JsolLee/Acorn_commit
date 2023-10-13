@@ -1,3 +1,13 @@
+HELP.md
+.metadata
+bin/
+tmp/
+.gradle
+build/
+gradle/
+.settings
+
+
 # Compiled class file
 *.class
 
@@ -11,7 +21,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>news_view</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="../assets/css/header.css" rel="stylesheet"/>
+
+	<!-- CSS file -->
+	<link rel="stylesheet" href="../../assets/css/news_view_style.css">
+	<link rel="stylesheet" href="../../assets/css/header.css">
+
+	<!--JavaScript : 수정중-->
+	<script src="news_view_functions.js"></script>
+
+</head>
+<body>
+	<!-- header : nav바 들어가는 부분-->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container-fluid" class="text-light">
+				<a class="navbar-brand" href="#">COMMIT</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#"></a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								뉴스
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">IT 이슈</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">국내 기업</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">대외 활동</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">채용 공고</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								커뮤니티
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">이직/신입</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">자소서</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">면접</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">합격자조언</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">구인/구직</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#">회원가입</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">로그인</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+    <!-- 검색, 정렬 기능 바(임시로 제작) -->
+	<section class="container mt-4">
+	    <div class="row">
+	        <!-- 검색 -->
+	        <div class="col-md-8">
+	            <input type="text" class="form-control" placeholder="검색">
+	        </div>
+	
+	        <!-- 정렬: dropdown -->
+	        <div class="col-md-4">
+	            <select class="form-control">
+	                <option>최신순</option>
+	                <option>조회순</option>
+	                <option>인기순</option>
+	            </select>
+	        </div>
+	    </div>
+	</section>
+
+    <!-- 뉴스 기사 -->
+    <!--뉴스 기사 출처 : https://www.economidaily.com/view/20230307150929862-->
+    <main class="container my-5">
+		<div class="row">
+			<!-- 뉴스 관련 태그 (왼쪽) -->
+			<div class="col-md-1">
+			    <aside id="news_tags" style="position: sticky; top: 50%;">
+				    <a class="btn btn-primary mb-1 d-block" href="#" role="button">AI</a><br>
+				    <a class="btn btn-primary mb-2 d-block" href="#" role="button">Chat GPT</a><br>
+				    <a class="btn btn-primary mb-2 d-block" href="#" role="button">Naver</a><br>
+				    <a class="btn btn-primary mb-2 d-block" href="#" role="button">Kakao</a>
+			    </aside>
+			</div>
+			
+			<div class="col-md-10">
+				<!-- 뉴스 소스 --> 
+			    <article class="mb-4" id="news_view_origin" name="news_view_origin">
+			        <small>
+			            <a href="#" class="text-muted">뉴스 ></a>
+			            <a href="#" class="text-muted">IT 이슈 ></a>
+			            <a href="#" class="text-primary">한국판 챗GPT 한국어 잘하는 AI...</a>
+			        </small>
+			    </article>
+		    	
+		    	<!-- 뉴스 제목 -->
+			    <article class="mb-3" id="news_view_title" name="news_view_title">
+			    	<h2 class="font-weight-bold text-center">한국판 챗GPT "한국어 잘하는 AI" 네이버-카카오 본격화</h2>
+			    </article>
+		
+				<!-- 뉴스 부제목 -->
+			    <article class="mb-4" id="news_view_subtitle" name="news_view_subtitle">
+			        <h5 class="text-center text-muted">전세계, 챗GPT 열풍 속에서 네이버와 카카오가 '한국어 잘하는 AI'로 승부수를 띄워</h5>
+			    </article>
+				
+				<!-- 뉴스 내용(글, 이미지) -->
+		    	<article class="container" id="news_view_content" name="news_view_content">
+						<div class="row">
+						    <div class="col-12 mb-3">
+						        <img src="../../assets/images/issue_veiw_1.jpg" class="img-fluid d-block mx-auto" id="fullscreenImage" style="cursor:pointer;" alt="openAI">
+								<div class="text-center"><small>OpenAI ChatGPT-3[사진=OpenAI]</small></div>
+						    </div>
+						    <div class="col-12">
+						        <p>
+									[이코노믹데일리] 인공지능(AI) 연구에서 선두를 지켜온 구글이 지난달 6일 AI 챗봇 ‘바드(Bard)’를 공개하며 오픈AI의 챗GPT에 공개적으로 맞불을 놨다. 성능 시연을 보이려 내놓은 대답이 오답으로 밝혀지면서 구글 주가가 7.7% 급락하는 등 난감한 상황이었으나 표면적으로는 분격적인 '인공지능 전쟁'이 시작되는 분위기다.
+						        </p>
+						        <p>
+						            구글이 서둘러 바드를 공개한 이유는 오픈AI가 유료 상품을 출시하면서 예상보다 많은 주목을 받기 때문이고, 또 오픈AI보다 기술 수준이 높은 기업들이 점유율 경쟁에서 뒤질 세라 맞대응에 나섰기 때문이다.
+						        </p>
+						    </div>
+						</div>
+						<div class="row">
+						    <div class="col-12">
+						        <p>
+									<h6><b>◆ 소리없는 글로벌 AI 전쟁, 우물안 ‘한글’</b></h6>
+						        </p>
+						        <p>
+						            치열하게 경쟁하고 있는 글로벌 기업들과 다르게, 국내 기업들은 서두르지 않는 분위기다. 독자적인 한글 문화권 덕분이다. AI의 성능은 데이터 보유량인 매개변수로 결정되며 글로벌 기업들은 영문 데이터를 기본으로 한다. 반면 우리나라는 한글을 기반으로 하며, 영문과 한글의 자연어 처리와 비정형 데이터의 결이 다르기 때문에 고유한 생태계를 형성하고 있다. 
+						        </p>
+						        <p>
+						            좋게 말하자면 외국계 AI이 침투하기가 어려워 우리만의 AI 개발이 힘을 받는 상황이고, 나쁘게 말하자면 세계적인 추세와 동떨어진 독자적 행보라고도 볼 수 있다.
+						        </p>
+								<p style="color: cornflowerblue;">
+						            “제가 인공지능 언어모델로써 한국어를 이해하고 응답하는 데에는 큰 문제가 없지만, 제가 공부하고 학습하는 개념은 아니므로 제가 얼마나 한국어를 공부했는지라는 질문에 대해서는 답변 드리기 어렵습니다. 그러나 제가 학습한 데이터 중에서 한국어도 포함되어 있기 때문에 가능한 한국어로 대화를 나눌 수 있도록 노력하고 있습니다.”
+						        </p>
+								<p>
+						            미국 인공지능(AI) 개발사 오픈AI가 지난해 12월 공개한 이후 전 세계를 뒤흔들고 있는 오픈AI의 ‘챗GPT’에게 한국어 학습 정도를 묻자 챗GPT는 "답변 드리기 어렵다"는 대답을 유창한 말솜씨로 대답했다.
+						        </p>
+								<p>
+						            전세계가 챗GPT 열풍 속에서 네이버와 카카오가 ‘한국어 잘하는 AI’로 승부수를 띄우고 있다. 챗GPT는 방대한 데이터를 학습해 질문에 답을 주는 형태다. 챗GPT에서 분석용으로 사용된 데이터는 대부분이 영어로 되어 있다 보니 그러하다. 
+						        </p>
+								<p>
+						            챗GPT의 응용 범위가 점차 확대되면서 다양한 분야에 응용 되고 있다. 글로벌 빅테크 기업들도 대거 챗봇 고도화에 나섰지만, 챗GPT 개발 배경 자체가 사고·언어 체계가 영미권을 바탕으로 두고 있는 데다 학습한 데이터도 영어 중심이라 국내에서 한글로 사용하면 종종 엉뚱하거나 사실과 다른 내용을 내놓기 때문이다.
+						        </p>
+								<p>
+						            카카오와 네이버 등 국내 기업은 이러한 챗GPT의 ‘빈 틈’을 기회로 삼고 저마다의 초거대 AI 개발에 나서고 있다.
+						        </p>
+						    </div>
+						</div>
+						<div class="row">
+						    <div class="col-12 mb-3">
+						        <img src="../../assets/images/issue_veiw_2.png" class="img-fluid d-block mx-auto" id="fullscreenImage" style="cursor:pointer;" alt="네이버 하이퍼클로바">
+								<div class="text-center"><small>네이버 하이퍼클로바X[사진=네이버클라우드]</small></div>
+						    </div>
+						    <div class="col-12">
+						        <p>
+									<h6><b>◆ 챗GPT의 6천500배 데이터··· 네이버의 초대규모 AI ‘하이퍼클로바’란?</b></h6>
+						        </p>
+						        <p>
+						            네이버의 ‘하이퍼클로바’의 특징은 네이버가 자체 보유한 700페타플롭스 성능의 슈퍼 컴퓨터와 네이버 생태계의 방대한 데이터를 조합한 초거대 AI로, 한국어 데이터 학습량이 챗GPT-3의 6500배 수준이다. 
+						        </p>
+						        <p>
+						            특히 데이터 중 한국어 비중이 97%에 달해 한국어에 최적화된 모델을 만들 수 있고, AI 주권 확보 차원에서도 의의가 있다.
+						        </p>
+								<p>
+						            오는 7월 공개하는 초대규모 AI ‘하이퍼클로바X’의 가장 큰 특징은 ‘챗GPT 대비 한국어 학습량이 6500배 많다’는 것이다. 하이퍼클로바X는 기존 하이퍼클로바를 토대로 사용자가 요구하는 응답을 즉시 제공하도록 업그레이드한 기술이다. 
+						        </p>
+								<p>
+						            네이버는 챗GPT의 생성AI와 같은 초대규모 AI 상용화를 주도해 누구나 활용 가능하도록 하고, 이를 통해 글로벌에서도 경쟁력 있는 국내 초대규모 AI 생태계를 만들어 가겠다는 계획이다.
+						        </p>
+						    </div>
+						</div>
+						<div class="row">
+						    <div class="col-12 mb-3">
+						        <img src="../../assets/images/issue_veiw_3.JPG" class="img-fluid d-block mx-auto" id="fullscreenImage" style="cursor:pointer;" alt="하이퍼클로바X 설명">
+								<div class="text-center"><small>27일 삼성동 코엑스에서 진행된 컨퍼런스에서 하이퍼클로바X에 대해 소개하는 김유원 네이버클라우드 대표[사진=네이버클라우드]</small></div>
+						    </div>
+						    <div class="col-12">
+						        <p>
+									김유원 네이버클라우드 대표는 지난 27일 서울 코엑스에서 네이버가 개최한 개발자 컨퍼런스 데뷰(DEVIEW)에서 “‘팀 네이버’는 글로벌 수준의 AI 기술력과 역량을 결집 시켜 전세계적 변화의 흐름에 가세할 준비를 마쳤다”며 자신감을 내비쳤다.
+						        </p>
+						        <p>
+									이어 “하이퍼클로바X는 고객이 자체 보유한 데이터를 하이퍼클로바와 결합해 사용자 니즈에 맞는 응답을 즉각 제공할 수 있도록 업그레이드한 초대규모 AI”라며 “개별 서비스부터 특정 기업 또는 국가 단위까지 누구나 저마다 목적에 최적화된 AI 프로덕트를 만들어 더 큰 가치를 창출할 새로운 비즈니스 기회를 만들 수 있을 것으로 기대한다”고 말했다.
+						        </p>
+						        <p>
+						            그동안 하이퍼클로바의 학습 데이터가 주로 한국어로 이루어진 만큼, 한국어에 최적화된 AI 언어 모델이라는 게 네이버 측 설명이다. 영어 데이터 기반인 챗GPT가 최근 한국어로 된 질문에 부정확한 답변을 내놓은 사례가 여럿 알려지면서 시장에선 챗GPT 신뢰성에 의문을 제기하고 있다.
+						        </p>
+								<p>
+						            지난 2021년 5월 공개된 하이퍼클로바는 오픈AI에서 개발한 시스템 GPT-3의 1750억개보다 많은 2040억개의 매개변수(파라미터)를 갖췄다. 파라미터는 인간의 뇌에서 뉴런끼리 정보를 전달하는 통로인 ‘시냅스’에 해당한다. AI의 인공 신경망인 셈이다. 다만 오픈 AI에서 연내 GPT-4를 공개할 예정으로 알려지면서 더 나아진 챗GPT가 또 다른 ‘특이점’을 가져올지 지켜봐야 한다.
+						        </p>
+								<p>
+						            서치GPT 프로젝트는 하이퍼클로바를 네이버 검색에 특화시킨 검색 대규모 언어모델(Search LLM) '오션(OCEAN)'을 백본으로 활용한다. 이를 바탕으로 네이버가 20년간 축적한 사용자의 검색 흐름 데이터를 모델링해 사용자가 검색 목적을 달성할 수 있게 최적의 경로를 안내한다. 이를 통해 검색 의도와 결과를 더 잘 이해하고 신뢰성이 강조된 답변을 생성할 수 있게 하는 기술이다.
+						        </p>
+						    </div>
+						</div>
+						<div class="row">
+						    <div class="col-12 mb-3">
+						        <img src="../../assets/images/issue_veiw_4.jpg" class="img-fluid d-block mx-auto" id="fullscreenImage" style="cursor:pointer;" alt="SearchGPT 프로젝트 설명">
+								<div class="text-center"><small>27일 개막한 데뷰2023에서 ‘SearchGPT 프로젝트’에 대해 설명 중인 김용범 네이버 서치US 치프 사이언티스트[사진=네이버클라우드]</small></div>
+						    </div>
+						    <div class="col-12">
+						        <p>
+									김용범 네이버 서치US 치프 사이언티스트는 "정보의 신뢰성, 네이버 서비스와의 연결성, 효과적인 정보 제공을 위한 멀티모달 세 가지를 중점으로 프로젝트를 진행 중"이라고 말했다.
+						        </p>
+						        <p>
+									이어 "최신성과 정보 간 교차·반복 검증 및 사용자 피드백을 통해 정확성과 신뢰성을 갖춘 정보를 생성하고, 쇼핑·페이·지도 등과 같은 네이버 서비스와의 유기적 연동을 통해 사용자의 검색 의도에 최적화된 정보를 제공한다. 또 이미지·동영상·음성 등과 함께 활용해 직관적 형태로 제공하고자 한다"며 "서치GPT 프로젝트를 통해 사용자들에게 한층 더 차별화된 검색 경험을 제공할 수 있을 것으로 기대한다"고 말했다．
+						        </p>
+							</div>
+						</div>
+						<div class="row">
+						    <div class="col-12 mb-3">
+						        <img src="../../assets/images/issue_veiw_5.jpg" class="img-fluid d-block mx-auto" id="fullscreenImage" style="cursor:pointer;" alt="카카오브레인 웹 서비스 오픈">
+								<div class="text-center"><small>카카오브레인, 웹 서비스 오픈 베타[사진=카카오브레인]</small></div>
+						    </div>
+						    <div class="col-12">
+						        <p>
+									<h6><b>◆ 편집·생성 자유로운 ‘이미지 AI’ 공개... 카카오브레인</b></h6>
+						        </p>
+						        <p>
+									카카오는 지난 2017년 2월 자동화된 기계 학습과 시각 데이터, 음성 인식, 자연어 처리 등을 연구하기 위해 카카오브레인을 설립했다. 카카오브레인은 지난 2021년 11월 60억개의 매개 변수와 2000억개 토큰의 한국어 데이터를 바탕으로 하는 ‘KoGPT’를 선보인 바 있다.
+						        </p>
+						        <p>
+						            2021년부터 순차적으로 AI 멀티 모달(Multi Modal, 언어·시각·청각 등 다양한 형태의 데이터를 복합적으로 이해하는 개념) 기반의 이미지 생성 모델인 ‘minDALL-E’와 ‘RQ-트랜스포머’, 그리고 이를 토대로 한 AI 아티스트 ‘칼로(Karlo)’까지 공개했다.
+						        </p>
+								<p>
+						            지난 7일 카카오브레인은 초거대 인공지능(AI) 이미지 생성 모델 ‘칼로(Karlo)’를 기반으로 한 ‘B^ EDIT(비 에디트)’ 웹 서비스를 오픈 베타로 공개했다.
+						        </p>
+						    </div>
+						</div>
+						<div class="row">
+						    <div class="col-12 mb-3">
+						        <img src="../../assets/images/issue_veiw_6.jpg" class="img-fluid d-block mx-auto" id="fullscreenImage" style="cursor:pointer;" alt="카카오브레인 웹 서비스 오픈">
+								<div class="text-center"><small>카카오브레인, 웹 서비스 오픈 베타[사진=카카오브레인]</small></div>
+						    </div>
+						    <div class="col-12">
+						        <p>
+									이용자는 비에디트로 원하는 화풍의 이미지 생성은 물론, 다양한 기능을 활용해 이미지를 수정하는 등 자신의 상상력을 마음껏 표현할 수 있다. 비에디트에 접속해 △바로크 △3차원(3D) 렌더 △일본 애니메이션 등 총 30가지 화풍 중 원하는 화풍과 제시어(프롬프트)를 입력하면 AI가 화풍 및 프롬프트에 적합한 이미지 8장을 5~10초 이내로 생성한다.
+						        </p>
+						        <p>
+						            카카오브레인은 비 에디트 오픈 베타서비스에 대한 사용자 피드백을 받아 보완, 업데이트 과정을 진행할 계획이다. 서비스 개선에 도움이 되는 의견을 전달한 사용자 중 10명에게는 소정의 상품을 전달할 계획이다. 비에디트는 일정 기간 서비스 향상 단계를 거친 후 공식 출시 예정이다. 
+						        </p>
+						        <p>
+						            김일두 카카오브레인 대표는 “생성 이미지 모델이 모든 사용자에게 가장 유용하고 편리한 툴로서 생성 이미지 모델 표준이 되게 하는 게 목표”라며 “지속적인 업데이트와 전문가 수요에 맞춘 기능 개발을 통해 생성 이미지 기술에 최적화된 툴로 발전시켜 이미지 창작을 돕고 고품질 이미지를 효율적으로 제작할 수 있게 할 것”이라고 말했다.
+						        </p>
+						    </div>
+						</div>
+						<div class="row">
+						    <div class="col-12 mb-3">
+						        <img src="../../assets/images/issue_veiw_7.png" class="img-fluid d-block mx-auto" id="fullscreenImage" style="cursor:pointer;" alt="한국어 특화 AI 모델 '코(Ko)GPT'">
+								<div class="text-center"><small>한국어 특화 AI 모델 '코(Ko)GPT'에 대한 질문 예시.[사진=카카오브레인]</small></div>
+						    </div>
+						    <div class="col-12">
+						        <p>
+									카카오브레인은 올해 상반기 한국어에 특화한 AI 언어 모델 ‘코(Ko)GPT’의 새 버전을 출시할 계획이다. 김광섭 카카오브레인 최고기술책임자(CTO)는 지난 2일 온라인 기업설명회에서 “초거대 한국어 텍스트 생성 모델에 대한 기반 기술을 보유하고 있다"며 "적어도 우리나라에서는 언어 모델에 있어 압도적 경쟁력을 가질 수 있도록 투자를 아끼지 않을 예정”이라고 강조했다. 
+						        </p>
+						        <p>
+									카카오브레인은 코GPT를 바탕으로 한 AI 챗봇 서비스 ‘코챗 GPT’도 연내 출시 예정이다.
+						        </p>
+						        <p>
+						            Copyright © 이코노믹데일리, 무단전재·재배포 금지
+						        </p>
+						    </div>
+						</div>
+				</article>
+				
+				<!-- 뉴스 발행일, 출처, 저자 -->
+			    <article class="mb-4" id="news_view_source" name="news_view_source">
+			        <small>
+			            <a href="#" class="text-muted">2023-03-09 	|</a>
+			            <a href="#" class="text-muted">이코노믹데일리	|</a>
+			            <a href="#" class="text-primary">선재관 기자</a>
+			        </small>
+			    </article>
+			</div>
+		    
+		    <!-- 뉴스 관련 기능 (오른쪽) -->
+			<div class="col-md-1">
+	            <aside id="news_functions" style="position: sticky; top: 50%;">
+	                <div class="d-grid gap-2">
+						<div class="btn-group dropend">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle d-block" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button id="share" class="dropdown-item d-block" type="button"><i class="bi bi-discord"></i></button></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><button id="share" class="dropdown-item d-block" type="button"><i class="bi bi-facebook"></i></button></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><button id="share" class="dropdown-item d-block" type="button"><i class="bi bi-google"></i></button></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><button id="share" class="dropdown-item d-block" type="button"><i class="bi bi-instagram"></i></button></li>
+							</ul>
+						</div><br>
+			            <button class="btn btn-outline-success btn-sm me-md-2 d-block" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button><br>
+			            <button class="btn btn-outline-warning btn-sm me-md-2 d-block" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button><br>
+			            <button class="btn btn-outline-danger btn-sm me-md-2 d-block" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+	                </div>
+	            </aside>
+	        </div> 
+	    </div>
+		<hr/><hr/>
+	</main>
+	
+	<!-- 관련 뉴스 -->
+	<div class="my-5">	
+   		<article class="container" id="news_view_related" name="news_view_related">
+			<section>
+				<div class="row row-cols-1 row-cols-md-3 g-6 gy-4">
+				  <div class="col" style=" cursor: pointer;" onclick="location.href='#'">
+				    <div class="card">
+				      <img src="../../assets/images/issue_veiw_card_1.gif" class="card-img-top" alt="Goolge">
+				      <div class="card-body">
+				        <h5 class="card-title">구글 어시스턴트, 더 똑똑해진다…“생성형 AI ‘바드’ 탑재”</h5>
+				        <p class="card-text">불과 몇 주 전 아마존이 생성형 AI 기능을 갖춘 새 알렉사를 선보인 데 이어, 구글도 구글 어시스턴트에 생성형 AI 기능을 제공한다고 밝혔다.  구글이 10월 4일(현지 시각) 미국 뉴욕에서 열린 연례 신제품 발표 행사 메이드 포 구글(M...</p>
+				      </div>
+				      <div class="card-footer">
+				        <small class="text-body-secondary">추천기사</small>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="col" style=" cursor: pointer;" onclick="location.href='#'">
+				    <div class="card">
+				      <img src="../../assets/images/issue_veiw_card_2.gif" class="card-img-top" alt="Meta">
+				      <div class="card-body">
+				        <h5 class="card-title">인스타·페북 광고 제작 쉬워진다…메타 AI로 뚝딱</h5>
+				        <p class="card-text">메타가 기업 및 브랜드를 위한 생성형 인공지능(AI) 기반 마케팅 도구를 우리나라를 포함해 전세계에 도입한다고 5일 밝혔다. 해당 도구는  ▲문구 자동 생성 ▲이미지 재가공 ▲배경 생성 등 보다 효율적인 디지털 마케팅 업무를 돕는...</p>
+				      </div>
+				      <div class="card-footer">
+				        <small class="text-body-secondary">추천기사</small>
+				      </div>				      
+				    </div>
+				  </div>
+				  <div class="col" style=" cursor: pointer;" onclick="location.href='#'">
+				    <div class="card">
+				      <img src="../../assets/images/issue_veiw_card_3.gif" class="card-img-top" alt="Apple">
+				      <div class="card-body">
+				        <h5 class="card-title">맞대결 벌이는 메타 퀘스트3 vs 애플 비전 프로…승자는?</h5>
+				        <p class="card-text">지난 6월 공개돼 내년 초 출시될 예정인 애플의 MR 헤드셋 비전 프로의 가격은 3499달러다. 퀘스트3의 가격이 비전 프로의 7분1의 수준이다. 가격 경쟁력과 다양한...</p>
+				      </div>
+				      <div class="card-footer">
+				        <small class="text-body-secondary">추천기사</small>
+				      </div>				      
+				    </div>
+				  </div>
+				  <div class="col" style=" cursor: pointer;" onclick="location.href='#'">
+				    <div class="card">
+				      <img src="../../assets/images/issue_veiw_card_4.gif" class="card-img-top" alt="Dan bun dance">
+				      <div class="card-body">
+				        <h5 class="card-title">‘그만큼 신나신 거지’ PSG 대파한 뉴캐슬 DF, 인터뷰에서 댄스파티</h5>
+				        <p class="card-text">뉴캐슬은 알미론, 댄 번, 롱스태프, 셰어의 골에 힘입어 파리-밀란-뉴캐슬-도르트문트의 엄청난 죽음의 조에서 당당히 조 1위를 기록했다. 경기 종료 후 롱스태프와...</p>
+				      </div>
+				      <div class="card-footer">
+				        <small class="text-body-secondary">추천기사</small>
+				      </div>				      
+				    </div>
+				  </div>
+				  <div class="col" style=" cursor: pointer;" onclick="location.href='#'">
+				    <div class="card">
+				      <img src="../../assets/images/issue_veiw_card_5.gif" class="card-img-top" alt="Sonny">
+				      <div class="card-body">
+				        <h5 class="card-title">'9월에만 6골' 손흥민, EPL '이달의 선수' 수상 도전</h5>
+				        <p class="card-text">9월에만 6골을 쓸어 담은 토트넘의 주장 손흥민이 통산 4번째 프리미어리그(EPL) '이달의 선수' 수상에 도전한다. EPL 사무국은 5일(현지시간) 홈페이지를 통해 '9월...</p>
+				      </div>
+				      <div class="card-footer">
+				        <small class="text-body-secondary">추천기사</small>
+				      </div>				      
+				    </div>
+				  </div>
+				  <div class="col" style=" cursor: pointer;" onclick="location.href='#'">
+				    <div class="card">
+				      <img src="../../assets/images/issue_veiw_card_6.gif" class="card-img-top" alt="ozil">
+				      <div class="card-body">
+				        <h5 class="card-title">'레알-아스날 레전드' 외질, 현역 은퇴 선언… "부상으로 고통받아 은퇴"</h5>
+				        <p class="card-text">2013~2014시즌 여름이적시장에 레알을 떠나고 잉글리시 프리미어리그(EPL) 아스날로 이적한 외질은 7시즌 동안 활약하며 254경기 출전에 44골78도움을 기록했...</p>
+				      </div>
+				      <div class="card-footer">
+				        <small class="text-body-secondary">추천기사</small>
+				      </div>				      
+				    </div>
+				  </div>
+				</div>
+			</section>
+			
+			<div class="row my-5">
+				<hr/>
+				<!-- 인기 뉴스 -->
+				<div class="col-md-6">
+					<div class="table-responsive-md">
+					  <table class="table">
+						  <thead>
+						    <tr>
+						      <th scope="col">인기뉴스</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">1.</th>
+					      		<td class="col-10">과기부, 챗GPT에 의한 디지털 대응 '디지털 신질서 로드맵' 만든다</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">2.</th>
+					      		<td class="col-10">세계 최대 모바일 전시회 MWC23…한국 신기술 널리 알린다.</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">3.</th>
+					      		<td class="col-10">챗GPT, 韓 반도체 반사이익 될까...급선무는</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">4.</th>
+					      		<td class="col-10">"챗GPT 시작으로 AI 시대 본격화...반도체 수요 킬러 앱 될 것"</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">5.</th>
+					      		<td class="col-10">네이버 개발자 컨퍼런스 개막… 초대규모AI 하이퍼클로바X 7월 공개</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">6.</th>
+					      		<td class="col-10">리벨리온, '챗GPT 원천기술 지원' AI 반도체 '아톰' 국내최초 출시</td>
+							  </tr>							  							  							  							  							  
+						  </tbody>
+					  </table>
+					</div>
+			    </div>
+			    
+			    <!-- 최신 뉴스 -->
+				<div class="col-md-6">
+					<div class="table-responsive-md">
+					  <table class="table">
+						  <thead>
+						    <tr>
+						      <th scope="col">최신뉴스</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">1.</th>
+					      		<td class="col-10">​네이버, 신사옥 1784 찾은 사우디 장관과 AI·디지털트윈 협력 논의</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">2.</th>
+					      		<td class="col-10">당근, '모임' 데이터 알아본 동네 인기모임 트렌드</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">3.</th>
+					      		<td class="col-10">IBS, 양자나노과학 연구단, 세계최초 신개념 양자컴퓨터 초읽기</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">4.</th>
+					      		<td class="col-10">구글, 창립 25주년 맞아...검색부터 생성형 AI까지의 여정 되집어 본다</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">5.</th>
+					      		<td class="col-10">세계1위 가상자산거래소 바이낸스 흔들리나…경영진 줄사퇴</td>
+							  </tr>
+							  <tr style="cursor: pointer;" onclick="location.href='#'">
+					      		<th scope="row" class="col-2">6.</th>
+					      		<td class="col-10">웹툰협회·구글플레이, 글로벌 성공을 위한 중장기 협력안 발표</td>
+							  </tr>							  							  							  							  							  
+						  </tbody>
+					  </table>
+					</div>
+			    </div>
+				<hr/>
+		    </div>
+    	</article>
+	</div>
+
+    <!-- 댓글 -->
+    <div class="my-5">
+		<!-- 댓글 총 개수, 댓글 페이징 -->
+		<section class="container border p-3 my-4 rounded">
+			<div class="d-flex justify-content-between align-items-center">
+				<span class="font-weight-bold text-primary">댓글 총 개수: ---개</span>
+				<!-- 댓글 페이징 기능 -->
+				<div>
+					<a href="#page1" class="btn btn-outline-primary btn-sm mr-1">1</a>
+					<a href="#page2" class="btn btn-outline-primary btn-sm mr-1">2</a>
+					<a href="#page3" class="btn btn-outline-primary btn-sm mr-1">3</a>
+					<a href="#nextPage" class="btn btn-primary btn-sm">다음</a>
+				</div>
+			</div>
+		</section>
+		<br>
+
+		<!-- 댓글 작성 -->
+	    <section class="container">
+			<div class="card-body">
+			  <form class="form-horizontal">
+			    <div class="row">
+					<div class="form-floating col-sm-11">
+						<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 30px"></textarea>
+						<label for="floatingTextarea2" style="padding-left: 2rem;">Comment</label>
+					</div>
+			      	<div class="form-group col-sm-1">
+			       	 	<button type="button" class="btn btn-primary btn-sm btn-block replyAddBtn">
+			        		<i class="fa fa-save"></i> 저장
+			     	 	</button>
+			      	</div>
+			    </div>	
+			  </form>	
+			</div>
+	    </section>
+		<br><br>
+
+		<!-- 댓글 작성 -->
+	    <section class="container">
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card p-4" style="width: 100%;">
+				<div class="d-flex justify-content-between mb-3">
+					<div>
+						<div class="d-flex justify-content-between mb-2">
+							<h5 class="card-subtitle text-body-secondary">작성자 닉네임</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h7 class="text-text-body-secondary">작성된 시간</h7>
+						</div>
+						<hr />
+						<p class="card-text">댓글 내용</p>
+					</div>
+					<div class="align-self-start">
+						<div class="d-flex dropdown-center">
+							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
+							<ul class="dropdown-menu">
+								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
+								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
+							</ul>
+							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

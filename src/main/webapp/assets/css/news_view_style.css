@@ -1,0 +1,31 @@
+/* 뉴스 기사 영역 -> 뉴스 관련 태그, 뉴스 관련 기능 */
+#news_tags {
+    position: sticky;
+    top: 50%;
+}
+
+#news_functions {
+    position: sticky;
+    top: 50%;
+}
+
+#news_tags .btn, #news_functions .btn {
+    margin-bottom: 2px;
+}
+
+#news_tags .btn:last-child, #news_functions .btn:last-child {
+    margin-bottom: 0;
+}
+
+#news_tags .btn, #news_tags .btn:nth-child(2) {
+    margin-bottom: 1px;
+}
+
+/* 관련 뉴스 */
+.related-news-col {
+    cursor: pointer;
+}
+
+.text-body-secondary {
+    color: #6c757d;
+}

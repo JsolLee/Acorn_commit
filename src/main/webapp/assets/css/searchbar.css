@@ -1,0 +1,17 @@
+.input-group {
+    padding: 30px;
+}
+
+.form-control {
+    border: 2px solid #49aafd;
+}
+
+.btn {
+    border: 2px solid #49aafd;
+    color: #49aafd;
+    
+}
+
+.dropdown-menu {
+    border: 1px solid #49aafd;
+}

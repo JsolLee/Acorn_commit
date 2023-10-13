@@ -55,7 +55,7 @@ footer,header,hgroup,main,nav,section{
 
 /*** Filter ***/
 .main-container .filter-wrap .d-flex{
-  padding-left: 500px;
+  padding-left: 80px;
 }
 
 .main-container .filter-wrap .d-flex .btn{

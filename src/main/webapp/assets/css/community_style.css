@@ -3,17 +3,19 @@
     padding: 0;
 }
 
-html {
+/*html {
     font-size: 10px;
-}
+}*/
 
 ul, li {
-    list-style: none;
+   list-style: none;
 }
 
-a {
+.board_wrap a {
     text-decoration: none;
     color: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 .board_wrap {
@@ -45,9 +47,8 @@ a {
     min-width: 80px;
     margin-left: 10px;
     padding: 10px;
-    border: 1px solid #000;
     border-radius: 2px;
-    font-size: 1.4rem;
+    font-size: 15px;
 }
 
 .bt_wrap a:first-child {
@@ -55,13 +56,18 @@ a {
 }
 
 .bt_wrap a.on {
-    background: #000;
+    background:#0d6efd;
     color: #fff;
 }
 
 .board_list {
     width: 100%;
     border-top: 2px solid #000;
+}
+
+/*추가된 기능*/
+.board_list_wrap{
+	font-size: 10px;
 }
 
 .board_list > div {
@@ -81,7 +87,7 @@ a {
     display: inline-block;
     padding: 15px 0;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 15px;
 }
 
 .board_list > div.top > div {
@@ -132,18 +138,18 @@ a {
 
 .board_page a.bt {
     padding-top: 10px;
-    font-size: 1.2rem;
+    font-size: 15px;
     letter-spacing: -1px;
 }
 
 .board_page a.num {
     padding-top: 9px;
-    font-size: 1.4rem;
+    font-size: 15px;
 }
 
 .board_page a.num.on {
     border-color: #000;
-    background: #000;
+    background: #0d6efd;
     color: #fff;
 }
 
@@ -159,7 +165,7 @@ a {
 .board_view .title {
     padding: 20px 15px;
     border-bottom: 1px dashed #ddd;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .board_view .info {
@@ -212,7 +218,7 @@ a {
     padding: 15px;
     border-bottom: 1px solid #000;
     line-height: 160%;
-    font-size: 1.4rem;
+    font-size: 15px;
 }
 
 .board_write {
@@ -271,6 +277,7 @@ a {
 
 .board_write .cont {
     border-bottom: 1px solid #000;
+    font-size: 10px;
 }
 
 .board_write .cont textarea {

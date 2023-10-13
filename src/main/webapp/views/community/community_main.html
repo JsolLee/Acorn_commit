@@ -4,49 +4,110 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>커뮤니티 메인</title>
+  <!--CSS-->
   <link href="../../assets/css/community_main.css" rel="stylesheet" type="text/css" />
-</head>
+  <link href="../../assets/css/header.css" rel="stylesheet"/>
+  
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 <body>
-  <div class="nav">
-    <a href="" class="nav_item">뉴스</a>
-    <a href="" class="nav_item">취업</a>
-
-    <div class="nav-right-item">
-      <a href="" class="nav_item">로그아웃</a>
-      <a href="" class="nav_item">마이페이지</a>
-    </div>
-  </div>
-
-  <div class="sub_nav">
-    <a href="" class="sub_nav_item">이직/신입</a>
-    <a href="" class="sub_nav_item">자소서</a>
-    <a href="" class="sub_nav_item">면접</a>
-    <a href="" class="sub_nav_item">합격자 조언</a>
-    <a href="" class="sub_nav_item">구인/구직</a>
-  </div>
+ <header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container-fluid" class="text-light">
+			<a class="navbar-brand" href="#">COMMIT</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse  justify-content-between" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#"></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							뉴스
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">IT 이슈</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">국내 기업</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">대외 활동</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">채용 공고</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							커뮤니티
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">이직/신입</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">자소서</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">면접</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">합격자조언</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">구인/구직</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="join.html">회원가입</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="login.html">로그인</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	</header>
   <div class="Items1">
     <div class="Item1">
       <div class="Item_main">
-        <div class="Item_main_btn1">이직 신입</div>
+        <div class="Item_main_btn1">이직/신입</div>
         <a href="../community/community_list.html" class="Item_main_btn2">더보기</a>
       </div>
       <div class="item_detail">
         <li><a href="www.naver.com" class="link" onmousedown="SEARCH.Main.gaEvent(www.naver.com)">
             <span class="txt_subject">
-              연봉과 월급 많이 있는 직종
+              최신글1
             </span>
           </a>
           <div class="util">
-            <a href="" class="reply">
+            <span class="reply">
               댓글 수
             </a>
           </div>
         </li>
         <li><a href="www.naver.com" class="link" onmousedown="SEARCH.Main.gaEvent(www.naver.com)">
             <span class="txt_subject">
-              인턴 후 계획
+              최신글2
             </span>
           </a>
           <div class="util">
@@ -57,7 +118,7 @@
         </li>
         <li><a href="www.naver.com" class="link" onmousedown="SEARCH.Main.gaEvent(www.naver.com)">
             <span class="txt_subject">
-              포트폴리오 영상 선정
+              최신글3
             </span>
           </a>
           <div class="util">
@@ -68,7 +129,7 @@
         </li>
         <li><a href="www.naver.com" class="link" onmousedown="SEARCH.Main.gaEvent(www.naver.com)">
             <span class="txt_subject">
-              다른 곳에서 계약직으로라도 경력을 쌓아야 ...
+              최신글4
             </span>
           </a>
           <div class="util">
@@ -89,7 +150,7 @@
       <div class="item_detail">
         <li><a href="www.naver.com" class="link" onmousedown="SEARCH.Main.gaEvent(www.naver.com)">
             <span class="txt_subject">
-              밀레이시아 근무 CS
+              조언1
             </span>
           </a>
           <div class="util">
@@ -100,7 +161,7 @@
         </li>
         <li><a href="www.naver.com" class="link" onmousedown="SEARCH.Main.gaEvent(www.naver.com)">
             <span class="txt_subject">
-              아마존 웹서비스코리아 채용공고에 대해 아 ...
+              조언2
             </span>
           </a>
           <div class="util">
@@ -111,7 +172,7 @@
         </li>
         <li><a href="www.naver.com" class="link" onmousedown="SEARCH.Main.gaEvent(www.naver.com)">
             <span class="txt_subject">
-              (주)넥스트온 채용 관련래서 궁급합니다.
+              조언3
             </span>
           </a>
           <div class="util">
@@ -122,7 +183,7 @@
         </li>
         <li><a href="www.naver.com" class="link" onmousedown="SEARCH.Main.gaEvent(www.naver.com)">
             <span class="txt_subject">
-              같은 기업 다른 직무 동시 지원
+              조언4
             </span>
           </a>
           <div class="util">
@@ -245,5 +306,6 @@
 
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+.container {
+    margin-left: 25%;
+}
+
+.form-control {
+    border: 2px solid #0e6efd;
+}
+
+.btn {
+    
+    
+}
+
+.dropdown-menu {
+    border: 1px solid #0e6efd;
+    
+}
+
+.row {
+    display: flex;
+}
+
+.dropdown {
+    width: auto;
+    margin-left: 5%;
+}

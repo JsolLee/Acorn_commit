@@ -7,7 +7,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="../assets/css/header.css" rel="stylesheet"/>
 
 	<!-- CSS file -->
 	<link rel="stylesheet" href="../../assets/css/news_view_style.css">
@@ -18,80 +17,8 @@
 
 </head>
 <body>
-	<!-- header : nav바 들어가는 부분-->
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			<div class="container-fluid" class="text-light">
-				<a class="navbar-brand" href="#">COMMIT</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#"></a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-								aria-expanded="false">
-								뉴스
-							</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">IT 이슈</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">국내 기업</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">대외 활동</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">채용 공고</a></li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-								aria-expanded="false">
-								커뮤니티
-							</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">이직/신입</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">자소서</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">면접</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">합격자조언</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">구인/구직</a></li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="#">회원가입</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">로그인</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+	<!-- 헤더 -->
+	 <div id="header"></div>
 
     <!-- 검색, 정렬 기능 바(임시로 제작) -->
 	<section class="container mt-4">
@@ -543,7 +470,7 @@
 	    </section>
 		<br><br>
 
-		<!-- 댓글 작성 -->
+		<!-- 작성된 댓글 -->
 	    <section class="container">
 			<div class="card p-4" style="width: 100%;">
 				<div class="d-flex justify-content-between mb-3">
@@ -557,13 +484,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -584,13 +504,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -611,13 +524,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -638,13 +544,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -665,13 +564,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -692,13 +584,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -719,13 +604,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -746,13 +624,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -773,13 +644,6 @@
 					</div>
 					<div class="align-self-start">
 						<div class="d-flex dropdown-center">
-							<button class="btn btn-outline-secondary btn-sm me-md-2 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" type="button"><i class="fa fa-share"></i><i class="bi bi-share"></i></button>
-							<ul class="dropdown-menu">
-								<li><button class="dropdown-item d-block" type="button"><i class="bi bi-messenger"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-line"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-linkedin"></i></button></li>
-								<li><button class="dropdown-item" type="button"><i class="bi bi-telegram"></i></button></li>
-							</ul>
 							<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
 							<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
 							<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
@@ -796,3 +660,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
+
+ <!-- 헤더 -->
+<script src="../../assets/js/header.js"></script>

@@ -1,3 +1,7 @@
+main {
+  margin: 30px;
+}
+
 .top {
   line-height: 0.2; 
 }
@@ -16,13 +20,13 @@
   display: inline-block; 
   width: 13px;
   height: 13px;
-  background-image: url('../img/heart.png');
+  background-image: url('../images/job_view_heart.png');
   background-size: cover;
   margin-right: 2px;
 }
 
 .top .Interested_company:hover::before {
-  background-image: url('../img/redheart.png');
+  background-image: url('../images/job_view_redheart.png');
 }
 
 .middle {
@@ -95,7 +99,7 @@
 .middle .share {
   border: .5px gray solid;
   padding: 4px;
-  width: 250px; 
+  width: 270px; 
   position: relative;
   left: 550px;
   border-radius: 90px;
@@ -155,11 +159,11 @@
   display: inline-block; 
   width: 20px;
   height: 20px;
-  background-image: url('../img/star.png');
+  background-image: url('../images/job_view_star.png');
   background-size: cover;
   margin-right: 10px;
 }
 
 .bottom .scrap:hover::before {
-  background-image: url('../img/yellowstar.png');
+  background-image: url('../images/job_view_yellowstar.png');
 }

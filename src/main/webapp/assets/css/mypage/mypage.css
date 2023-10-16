@@ -34,6 +34,7 @@ main {
 }
 
 .mypage-wrap .title a:hover,
+.mypage-wrap .show-user .content .hover:hover,
 .mypage-wrap .user-edit li a:hover{
   color: #999 !important;
 }

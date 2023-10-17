@@ -2,189 +2,214 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>job</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta charset="UTF-8">
+	<title>job</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- Google Web Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-    rel="stylesheet">
+	<!-- Google Web Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+		rel="stylesheet">
 
-  <!-- Icon Font Stylesheet -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+	<!-- Icon Font Stylesheet -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Stylesheet -->
-  <link href="../../assets/css/job.css" rel="stylesheet">
-  <link href="../../assets/css/header.css" rel="stylesheet">
-  <link href="../../assets/css/pagination.css" rel="stylesheet">
+	<!-- Stylesheet -->
+	<link href="../../assets/css/job.css" rel="stylesheet">
+	<link href="../../assets/css/header.css" rel="stylesheet">
+	<link href="../../assets/css/pagination.css" rel="stylesheet">
 
-  <!-- Customized Bootstrap Stylesheet -->
-  <link href="../../assets/GrowMark-1.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Customized Bootstrap Stylesheet -->
+	<link href="../../assets/GrowMark-1.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Spinner Start -->
-  <div id="spinner"
-    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
-  </div>
-  <!-- Spinner End -->
+	<!-- Spinner Start -->
+	<div id="spinner"
+		class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+		<div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+	</div>
+	<!-- Spinner End -->
 
-  <!-- Header 삽입을 위해 빈 div 생성-->
-  <div id="header">
+	<!-- Header 삽입을 위해 빈 div 생성-->
+	<div id="header">
 
-  </div>
+	</div>
 
-  <!-- RECRUIT 배경이미지 -->
-  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center py-5">
-      <h1 class="display-2 text-white mb-4 animated slideInDown">RECRUIT</h1>
-    </div>
-  </div>
+	<!-- RECRUIT 배경이미지 -->
+	<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+		<div class="container text-center py-5">
+			<h1 class="display-2 text-white mb-4 animated slideInDown">RECRUIT</h1>
+		</div>
+	</div>
 
-  <section>
-    <div class="main-container">
+	<section>
+		<div class="main-container">
 
-      <!-- 조건선택 : 경력 급여 근무지역 학력 검색버튼 -->
-      <div class="filter-container">
-        <div class="filter-wrap">
-          <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <a class="navbar-brand">조건 검색</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <div class="btn-group">
-                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        경력
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><input type="checkbox" id="new"><label for="new">신입</label></li>
-                        <li><input type="checkbox" id="under-two"><label for="under-two">2년 이하</label></li>
-                        <li><input type="checkbox" id="two-to-five"><label for="two-to-five">2년~5년</label></li>
-                        <li><input type="checkbox" id="over-five"><label for="over-five">5년 이상</label></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="btn-group">
-                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        급여
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><input type="checkbox" id="new"><label for="new">2000~2500</label></li>
-                        <li><input type="checkbox" id="under-two"><label for="under-two">2500~3000</label></li>
-                        <li><input type="checkbox" id="two-to-five"><label for="two-to-five">3500~4000</label></li>
-                        <li><input type="checkbox" id="over-five"><label for="over-five">4000 이상</label></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="btn-group">
-                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        근무지역
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><input type="checkbox" id="under-two"><label for="under-two">서울</label></li>
-                        <li><input type="checkbox" id="two-to-five"><label for="two-to-five">경기</label></li>
-                        <li><input type="checkbox" id="over-five"><label for="over-five">부산</label></li>
-                        <li><input type="checkbox" id="over-five"><label for="over-five">인천</label></li>
-                        <li><input type="checkbox" id="over-five"><label for="over-five">세종</label></li>
-                        <li><input type="checkbox" id="over-five"><label for="over-five">그 외</label></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="btn-group">
-                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        학력
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><input type="checkbox" id="under-two"><label for="under-two">전문학</label></li>
-                        <li><input type="checkbox" id="two-to-five"><label for="two-to-five">학사</label></li>
-                        <li><input type="checkbox" id="over-five"><label for="over-five">석사 이상</label></li>
-                      </ul>
+			<!-- 조건선택 : 경력 급여 근무지역 학력 검색버튼 -->
+			<div class="filter-container">
+				<div class="filter-wrap">
+					<nav class="navbar navbar-expand-lg">
+						<div class="container-fluid">
+							<a class="navbar-brand">조건 검색</a>
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+								data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false"
+								aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse btn-flex" id="navbarNav">
+								<div class="filter-container-wrap">
+									<ul class="navbar-nav">
+										<li class="nav-item">
+											<div class="btn-group">
+												<button class="btn dropdown-toggle" type="button"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													경력
+												</button>
+												<ul class="dropdown-menu">
+													<li class="dropdown-item"><input type="checkbox" id="new"><label
+															for="new">신입</label></li>
+													<li class="dropdown-item"><input type="checkbox"
+															id="under-two"><label for="under-two">2년 이하</label></li
+														class="dropdown-item">
+													<li class="dropdown-item"><input type="checkbox"
+															id="two-to-five"><label for="two-to-five">2년~5년</label></li>
+													<li class="dropdown-item"><input type="checkbox"
+															id="over-five"><label for="over-five">5년 이상</label></li>
+												</ul>
+											</div>
+										</li>
+										<li class="nav-item">
+											<div class="btn-group">
+												<button class="btn dropdown-toggle" type="button"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													채용날짜
+												</button>
+												<ul class="dropdown-menu">
+													<li><input type="checkbox" id="two-to-five"><label
+															for="two-to-five">공고 등록일순</label></li>
+													<li><input type="checkbox" id="new"><label for="new">공고 시작일순</label>
+													</li>
+													<li><input type="checkbox" id="under-two"><label for="under-two">공고
+															마감일순</label></li>
+												</ul>
+											</div>
+										</li>
+										<li class="nav-item">
+											<div class="btn-group">
+												<button class="btn dropdown-toggle" type="button"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													근무지역
+												</button>
+												<ul class="dropdown-menu">
+													<li><input type="checkbox" id="under-two"><label
+															for="under-two">서울</label></li>
+													<li><input type="checkbox" id="two-to-five"><label
+															for="two-to-five">경기</label></li>
+													<li><input type="checkbox" id="over-five"><label
+															for="over-five">부산</label></li>
+													<li><input type="checkbox" id="over-five"><label
+															for="over-five">인천</label></li>
+													<li><input type="checkbox" id="over-five"><label
+															for="over-five">세종</label></li>
+													<li><input type="checkbox" id="over-five"><label for="over-five">그
+															외</label></li>
+												</ul>
+											</div>
+										</li>
+										<li class="nav-item">
+											<div class="btn-group">
+												<button class="btn dropdown-toggle" type="button"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													학력
+												</button>
+												<ul class="dropdown-menu">
+													<li><input type="checkbox" id="under-two"><label
+															for="under-two">전문학사</label></li>
+													<li><input type="checkbox" id="two-to-five"><label
+															for="two-to-five">학사</label></li>
+													<li><input type="checkbox" id="over-five"><label for="over-five">석사
+															이상</label></li>
+												</ul>
+											</div>
+								</div>
+								<form class="d-flex" role="search">
+									<input class="form-control me-2" type="search" placeholder="Search"
+										aria-label="Search">
+									<button class="btn btn-outline-success" type="submit">검색</button>
+								</form>
+								</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<!--채용 공고 리스트 : jsp 이용해서 목록 리스트로 가져옴-->
+			<div class="job-list">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item list-group-li">
+						<div class="list-group-idx"><a href="job_view.html">1</a></div>
+						<div class="list-group-company"><a href="job_view.html">기업명</a></div>
+						<div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
+						<div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
+					</li>
 
-                      <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">검색</button>
-                      </form>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <!--채용 공고 리스트 : jsp 이용해서 목록 리스트로 가져옴-->
-      <div class="job-list">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item list-group-li">
-            <div class="list-group-idx"><a href="job_view.html">1</a></div>
-            <div class="list-group-company"><a href="job_view.html">기업명</a></div>
-            <div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
-            <div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
-          </li>
+					<li class="list-group-item list-group-li">
+						<div class="list-group-idx"><a href="job_view.html">2</a></div>
+						<div class="list-group-company"><a href="job_view.html">기업명</a></div>
+						<div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
+						<div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
+					</li>
 
-          <li class="list-group-item list-group-li">
-            <div class="list-group-idx"><a href="job_view.html">2</a></div>
-            <div class="list-group-company"><a href="job_view.html">기업명</a></div>
-            <div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
-            <div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
-          </li>
+					<li class="list-group-item list-group-li">
+						<div class="list-group-idx"><a href="job_view.html">3</a></div>
+						<div class="list-group-company"><a href="job_view.html">기업명</a></div>
+						<div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
+						<div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
+					</li>
 
-          <li class="list-group-item list-group-li">
-            <div class="list-group-idx"><a href="job_view.html">3</a></div>
-            <div class="list-group-company"><a href="job_view.html">기업명</a></div>
-            <div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
-            <div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
-          </li>
+					<li class="list-group-item list-group-li">
+						<div class="list-group-idx"><a href="job_view.html">4</a></div>
+						<div class="list-group-company"><a href="job_view.html">기업명</a></div>
+						<div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
+						<div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
+					</li>
 
-          <li class="list-group-item list-group-li">
-            <div class="list-group-idx"><a href="job_view.html">4</a></div>
-            <div class="list-group-company"><a href="job_view.html">기업명</a></div>
-            <div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
-            <div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
-          </li>
+					<li class="list-group-item list-group-li">
+						<div class="list-group-idx"><a href="job_view.html">5</a></div>
+						<div class="list-group-company"><a href="job_view.html">기업명</a></div>
+						<div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
+						<div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
+					</li>
+				</ul>
+			</div>
+			<!-- 페이징 -->
 
-          <li class="list-group-item list-group-li">
-            <div class="list-group-idx"><a href="job_view.html">5</a></div>
-            <div class="list-group-company"><a href="job_view.html">기업명</a></div>
-            <div class="list-group-title"><a href="job_view.html">공고 제목</a></div>
-            <div class="list-group-conditions"><a href="job_view.html">지역 / 경력 / 학력</a></div>
-          </li>
-        </ul>
-      </div>
-      <!-- 페이징 -->
+			<div id="pagination">
 
-      <div id="pagination">
+			</div>
 
-      </div>
+		</div>
+	</section>
 
-    </div>
-  </section>
+	<!-- JavaScript Libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/GrowMark-1.0.0/lib/wow/wow.min.js"></script>
+	<script src="../../assets/GrowMark-1.0.0/lib/easing/easing.min.js"></script>
+	<script src="../../assets/GrowMark-1.0.0/lib/waypoints/waypoints.min.js"></script>
+	<script src="../../assets/GrowMark-1.0.0/lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="../../assets/GrowMark-1.0.0/lib/lightbox/js/lightbox.min.js"></script>
 
-  <!-- JavaScript Libraries -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/GrowMark-1.0.0/lib/wow/wow.min.js"></script>
-  <script src="../../assets/GrowMark-1.0.0/lib/easing/easing.min.js"></script>
-  <script src="../../assets/GrowMark-1.0.0/lib/waypoints/waypoints.min.js"></script>
-  <script src="../../assets/GrowMark-1.0.0/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="../../assets/GrowMark-1.0.0/lib/lightbox/js/lightbox.min.js"></script>
-
-  <!-- Template Javascript -->
-  <script src="../../assets/GrowMark-1.0.0/js/main.js"></script>
+	<!-- Template Javascript -->
+	<script src="../../assets/GrowMark-1.0.0/js/main.js"></script>
 
 </body>
+
 </html>
 <!-- header, pagination js 연결-->
 <script src="../../assets/js/header.js"></script>

@@ -1,6 +1,7 @@
 
 main {
   margin: 50px;
+  align-items: center;
 }
 
 .top {
@@ -12,7 +13,7 @@ main {
 }
 
 .top .Interested_company {
-  border: 1.7px solid rgb(13,110,253);
+  border: 1.7px solid rgb(100, 100, 255);
   border-radius: 4px;
   font-size: 15px;
   padding: 5px 7px 7px; 
@@ -37,8 +38,9 @@ main {
 
 .middle {
   margin-top: 20px;
-  position: relative;
+  position: relative;  
   white-space: nowrap;
+  
 }
 
 .middle span {
@@ -55,7 +57,7 @@ main {
 }
 
 .middle span + hr {
-  display: inline-block; /* 블록 요소로 변경하여 수평선으로 표시 */
+  display: inline-block; 
 }
 
 .middle table {
@@ -63,6 +65,7 @@ main {
   padding: 10px;
   display: inline-block;
   vertical-align: top;
+
 }
 
 .middle th {
@@ -104,7 +107,7 @@ main {
   padding: 4px;
   width: 270px; 
   position: relative;
-  left: 1550px;
+  left: 550px;
   border-radius: 90px;
 }
 
@@ -116,7 +119,7 @@ main {
 }
 
 .middle .share .url {
-  background-color:rgb(13,110,253);
+  background-color: rgb(100, 100, 255);
   color: white;
   border-radius: 30px;
   font-size: 13px;
@@ -127,7 +130,6 @@ main {
 
 .bottom {
   white-space: nowrap;
-  margin: 30px 700px;
 }
 
 .bottom button{
@@ -138,7 +140,7 @@ main {
 }
 
 .bottom .visit_site {
-  background-color:rgb(13,110,253);
+  background-color: rgb(100, 100, 255);
   color: white;
   border: none;
 }
@@ -150,7 +152,7 @@ main {
 
 .bottom .scrap {
   background-color: white;
-  border: 1.5px solid rgb(13,110,253);
+  border: 1.5px solid rgb(75, 75, 255);
 }
 
 .bottom .scrap:hover {

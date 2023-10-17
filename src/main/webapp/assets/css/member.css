@@ -1,6 +1,7 @@
 header{
     height: 100px;
 }
+
 .container {
     height:calc(100vh - 200px);
     display: flex;
@@ -8,7 +9,7 @@ header{
     align-items : center;
 }
 .form-signin {
-    max-width: 350px;
+    max-width: 360px;
     padding: 1rem;
 }
 .form-signin a{
@@ -16,7 +17,7 @@ header{
    color : gray;
 }
 .form-signup {
-    max-width: 350px;
+    max-width: 360px;
     padding: 1rem;
 }
 .form-idfind {

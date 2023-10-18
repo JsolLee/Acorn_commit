@@ -92,21 +92,22 @@
       <!-- 스크랩 카테고리 버튼-->
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
         <input type="radio" class="btn-check" name="btnradio" id="scrap-content" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="scrap-content">커뮤니티</label>
+        <label class="btn btn-outline-primary" for="scrap-content" id="scrap-community">커뮤니티</label>
 
         <input type="radio" class="btn-check" name="btnradio" id="scrap-comment" autocomplete="off">
-        <label class="btn btn-outline-primary" for="scrap-comment">채용 공고</label>
+        <label class="btn btn-outline-primary" for="scrap-comment" id="scrap-job">채용 공고</label>
       </div>
 
       <button type="button" class="btn btn-outline-danger">삭제</button>
 
       <!-- 스크랩 글 목록 -->
       <div class="scrap-content-list">
-        <ul class="list-group">
+        <ul class="list-group" id="group-community">
           <li class="list-group-item list-group-top">
             <label class="list-index">No.</label>
             <label class="list-title">제목</label>
           </li>
+          <div class="list-group-div">
           <li class="list-group-item">
             <input class="form-check-input me-1" type="checkbox" value="">
             <label class="form-check-label">1</label>
@@ -122,16 +123,18 @@
             <label class="form-check-label">3</label>
             <label class="form-check-label"><a href="#">스크랩 글3</a></label>
           </li>
+        </div>
         </ul>
       </div>
 
       <!-- 스크랩 채용 공고 목록 -->
       <div class="scrap-content-list">
-        <ul class="list-group group-hidden">
+        <ul class="list-group group-hidden" id="group-job">
           <li class="list-group-item list-group-top">
             <label class="list-index">No.</label>
             <label class="list-title">제목</label>
           </li>
+          <div class="list-group-div">
           <li class="list-group-item">
             <input class="form-check-input me-1" type="checkbox" value="">
             <label class="form-check-label">1</label>
@@ -147,17 +150,19 @@
             <label class="form-check-label">3</label>
             <label class="form-check-label"><a href="#">스크랩 채용 공고3</a></label>
           </li>
+        </div>
         </ul>
       </div>
     </div>
+    
   </main>
   <div id="pagination">
 
   </div>
 </body>
 </html>
-<script src="../mypage/js/bootstrap.bundle.min.js"></script>
-<script src="../mypage/js/color-modes.js"></script>
+<script src="../../assets/js/mypage/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/mypage/color-modes.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -166,3 +171,6 @@
 <!-- header, pagination js 연결-->
 <script src="../../assets/js/header.js"></script>
 <script src="../../assets/js/pagination.js"></script>
+
+<!-- my_activity.js 연결 -->
+<script src="../../assets/js/mypage/my_scrap.js"></script>

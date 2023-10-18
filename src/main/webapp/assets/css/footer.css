@@ -1,0 +1,12 @@
+/* footer css */
+
+.footer .footer_join input, a {
+    font-weight: bold;
+}
+
+.footer .footer_news a,
+.footer .footer_community a,
+.footer .footer_recommend a,
+.footer .footer_info a {
+    text-decoration-line: none !important;
+}

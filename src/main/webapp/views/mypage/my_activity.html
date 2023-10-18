@@ -92,17 +92,17 @@
       <!-- 나의 활동 카테고리 버튼-->
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
         <input type="radio" class="btn-check" name="btnradio" id="activity-content" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="activity-content">내가 쓴 글</label>
+        <label class="btn btn-outline-primary" id="my-content" for="activity-content">내가 쓴 글</label>
 
         <input type="radio" class="btn-check" name="btnradio" id="activity-comment" autocomplete="off">
-        <label class="btn btn-outline-primary" for="activity-comment">내가 쓴 댓글</label>
+        <label class="btn btn-outline-primary" id="my-comment" for="activity-comment">내가 쓴 댓글</label>
       </div>
 
       <button type="button" class="btn btn-outline-danger">삭제</button>
 
       <!-- 내가 쓴 글 목록 -->
       <div class="activity-content-list">
-        <ul class="list-group">
+        <ul class="list-group" id="group-content">
           <li class="list-group-item list-group-top">
             <label class="list-index">No.</label>
             <label class="list-title">제목</label>
@@ -127,7 +127,7 @@
 
       <!-- 내가 쓴 댓글 목록 -->
       <div class="activity-content-list">
-        <ul class="list-group group-hidden">
+        <ul class="list-group group-hidden" id="group-comment">
           <li class="list-group-item list-group-top">
             <label class="list-index">No.</label>
             <label class="list-title">제목</label>
@@ -157,8 +157,8 @@
   </div>
 </body>
 </html>
-<script src="../mypage/js/bootstrap.bundle.min.js"></script>
-<script src="../mypage/js/color-modes.js"></script>
+<script src="../../assets/js/mypage/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/mypage/color-modes.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -167,3 +167,6 @@
 <!-- header, pagination js 연결-->
 <script src="../../assets/js/header.js"></script>
 <script src="../../assets/js/pagination.js"></script>
+
+<!-- my_activity.js 연결 -->
+<script src="../../assets/js/mypage/my_activity.js"></script>

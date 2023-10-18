@@ -20,6 +20,7 @@
 	<!-- Stylesheet -->
 	<link href="../../assets/css/job.css" rel="stylesheet">
 	<link href="../../assets/css/header.css" rel="stylesheet">
+	<link href="../../assets/css/footer.css" rel="stylesheet">
 	<link href="../../assets/css/pagination.css" rel="stylesheet">
 
 	<!-- Customized Bootstrap Stylesheet -->
@@ -70,11 +71,11 @@
 													학력
 												</button>
 												<ul class="dropdown-menu">
-													<li><input type="checkbox" id="under-two"><label
+													<li class="dropdown-item"><input type="checkbox" id="under-two"><label
 															for="under-two">전문학사</label></li>
-													<li><input type="checkbox" id="two-to-five"><label
+													<li class="dropdown-item"><input type="checkbox" id="two-to-five"><label
 															for="two-to-five">학사</label></li>
-													<li><input type="checkbox" id="over-five"><label for="over-five">석사
+													<li class="dropdown-item"><input type="checkbox" id="over-five"><label for="over-five">석사
 															이상</label></li>
 												</ul>
 											</div>
@@ -107,17 +108,17 @@
 													근무지역
 												</button>
 												<ul class="dropdown-menu">
-													<li><input type="checkbox" id="under-two"><label
-															for="under-two">서울</label></li>
-													<li><input type="checkbox" id="two-to-five"><label
-															for="two-to-five">경기</label></li>
-													<li><input type="checkbox" id="over-five"><label
+													<li class="dropdown-item"><input type="checkbox" id="under-two"><label
+															for="under-two">서울</label></li class="dropdown-item">
+													<li class="dropdown-item"><input type="checkbox" id="two-to-five"><label
+															for="two-to-five">경기</label></li class="dropdown-item">
+													<li class="dropdown-item"><input type="checkbox" id="over-five"><label
 															for="over-five">부산</label></li>
-													<li><input type="checkbox" id="over-five"><label
+													<li class="dropdown-item"><input type="checkbox" id="over-five"><label
 															for="over-five">인천</label></li>
-													<li><input type="checkbox" id="over-five"><label
+													<li class="dropdown-item"><input type="checkbox" id="over-five"><label
 															for="over-five">세종</label></li>
-													<li><input type="checkbox" id="over-five"><label for="over-five">그
+													<li class="dropdown-item"><input type="checkbox" id="over-five"><label for="over-five">그
 															외</label></li>
 												</ul>
 											</div>
@@ -131,11 +132,11 @@
 													채용 날짜
 												</button>
 												<ul class="dropdown-menu">
-													<li><input type="checkbox" id="two-to-five"><label
+													<li class="dropdown-item"><input type="checkbox" id="two-to-five"><label
 															for="two-to-five">공고 등록일순</label></li>
-													<li><input type="checkbox" id="new"><label for="new">공고 시작일순</label>
+													<li class="dropdown-item"><input type="checkbox" id="new"><label for="new">공고 시작일순</label>
 													</li>
-													<li><input type="checkbox" id="under-two"><label for="under-two">공고
+													<li class="dropdown-item"><input type="checkbox" id="under-two"><label for="under-two">공고
 															마감일순</label></li>
 												</ul>
 											</div>
@@ -197,7 +198,9 @@
 			<div id="pagination">
 
 			</div>
-
+	<div id="footer">
+		
+	</div>
 		</div>
 	</section>
 
@@ -218,4 +221,5 @@
 </html>
 <!-- header, pagination js 연결-->
 <script src="../../assets/js/header.js"></script>
+<script src="../../assets/js/footer.js"></script>
 <script src="../../assets/js/pagination.js"></script>

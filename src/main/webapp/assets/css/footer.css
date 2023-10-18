@@ -1,6 +1,7 @@
 /* footer css */
 
-.footer .footer_join input, a {
+.footer .footer_join input, 
+.footer a {
     font-weight: bold;
 }
 
@@ -9,4 +10,4 @@
 .footer .footer_recommend a,
 .footer .footer_info a {
     text-decoration-line: none !important;
-}
+}S

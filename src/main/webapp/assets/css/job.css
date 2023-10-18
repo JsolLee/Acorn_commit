@@ -4,7 +4,7 @@
 }
 
 a{
-	text-decoration: none;
+	text-decoration: none !important;
 	color: inherit;
 }
 
@@ -99,10 +99,18 @@ footer,header,hgroup,main,nav,section{
   padding-left: 15px;
 }
 
-.filter-wrap .btn-flex{
+/* .filter-wrap .btn-flex{
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-around;
+} */
+
+.filter-wrap .navbar-brand{
+	color: #4761FF !important;
+}
+
+.filter-wrap .btn-group{
+	display: block !important;
 }
 
 /* 채용 공고 리스트 */

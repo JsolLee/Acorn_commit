@@ -29,17 +29,14 @@
         <script type="text/javascript" src="../../assets/js/job/job_view_map.js"></script>
     </head>
 
-    <body>
+    <body onload="initializeMap()">
         <div id="header"></div> <!-- header -->
 
         <section class="top">
 
-            <div class="container text-nowrap" id="title">
+            <div class="container" id="title">
                 <div class="row mt-5 my-2">
-                    <div class="col-1">(주)진솔</div>
-                    <div class="col-2">
-                        <button type="button" class="btn btn-light">관심 기업</button>
-                    </div>
+                    <div class="col-3 pt-2">(주)진솔<button class="badge btn btn-outline-primary ms-2">관심 기업</button></div>
                 </div>
                 <div class="row">
                     <div class="col fs-1">진솔컴퍼니 백엔드 개발자 채용</div>
@@ -50,7 +47,7 @@
                 <div class="row text-body-tertiary my-2">
                     <div class="col"><hr></div>
                     <div class="col-1  text-center">조회수103회</div>
-                    <div class="col-2"><hr></div>
+                    <div class="col-1"><hr></div>
                 </div>
                 <div class="row justify-content-center fs-5 fw-bold my-2">
                     <div class="col-4">지원자격</div>
@@ -58,26 +55,49 @@
                 </div>
                 <div class="row justify-content-center fs-6 text-center my-2">
                     <div class="col-1 fw-bold">경  력</div>
-                    <div class="col-3">신입</div>
+                    <div class="col-3 text-secondary">신입</div>
                     <div class="col-1 fw-bold">고용형태</div>
-                    <div class="col-3">정규직</div>
+                    <div class="col-3 text-secondary">정규직</div>
                 </div>
                 <div class="row justify-content-center fs-6 text-center my-2">
                     <div class="col-1 fw-bold">학  력</div>
-                    <div class="col-3">학력무관</div>
+                    <div class="col-3 text-secondary">학력무관</div>
                     <div class="col-1 fw-bold">급  여</div>
-                    <div class="col-3">면접 후 결정</div>
+                    <div class="col-3 text-secondary">면접 후 결정</div>
                 </div>
                 <div class="row justify-content-center fs-6 text-center my-2">
                     <div class="col-1 fw-bold">핵심역량</div>
-                    <div class="col-3">java, Spring, Javascript, python</div>
+                    <div class="col-3 text-secondary">java, Spring, Javascript, python</div>
                     <div class="col-1 fw-bold">지  역</div>
-                    <div class="col-3">서울특별시<button class="badge btn btn-primary ms-2">지도</button></div>
+                    <div class="col-3 text-secondary">서울특별시<a class="badge btn btn-primary ms-2" href="#map">지도 ></a></div>
                 </div>
                 <div class="row text-body-tertiary my-2">
                     <div class="col"><hr></div>
                 </div>
             </div>
         </section>
+        
+        <section class="middle">
+			<div class="container" id="condition_detail">
+                <div class="row justify-content-center my-5">
+					<div class="row justify-content-center">
+	                    <img src="../../assets/images/job_view/one.jpg" alt="하늘 그림">
+	                </div>
+                </div>
+            </div>
+		</section>
+        
+       
+        
+        <section class="bottom">
+			<div class="container" id="title">
+				<div class="row justify-content-center my-5">
+	            	<div id="map" style="width:750px;height:350px;"></div>
+	            </div>
+            </div>
+			
+		</section>
+
+
     </body>
 </html>

@@ -1,13 +1,6 @@
-.top .container #title .col-sm-2 .btn.btn-light::before {
-  content: " ";
-  display: inline-block; 
-  width: 15px;
-  height: 15px;
-  background-image: url('../images/job_view_heart.png');
-  background-size: cover;
-  margin-right: 5px;
-}
 
-.top .container .row .col-sm-2 .btn.btn-light:hover::before {
-  background-image: url('../images/job_view_redheart.png');
+#img {
+    background-image: url("../images/job_view/one.jpg");
+    width: 1000px;
+    height: 6000px;
 }

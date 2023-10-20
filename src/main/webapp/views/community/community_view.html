@@ -1,140 +1,177 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>커뮤니티 글 보기</title>
-    <!-- css -->
-    <link rel="stylesheet" href="../../assets/css/community_css.css">
-    <link href="../../assets/css/header.css" rel="stylesheet"/>
-    <link href="../../assets/css/member.css" rel="stylesheet"/>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>글 보기 페이지</title>
+	<!-- css -->
+
+	<link href="../../assets/css/header.css" rel="stylesheet" />
+
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
-	
-	<!--상단 메뉴바-->
-	<header>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<div class="container-fluid" class="text-light">
-			<a class="navbar-brand" href="#">COMMIT</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse  justify-content-between" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#"></a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							뉴스
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">IT 이슈</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">국내 기업</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">대외 활동</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">채용 공고</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							커뮤니티
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">이직/신입</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">자소서</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">면접</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">합격자조언</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">구인/구직</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="join.html">회원가입</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="login.html">로그인</a>
-					</li>
-				</ul>
-			</div>
+	<!--상단 메뉴 바-->
+	<div id="header">
+
+	</div>
+
+	<!--글 보기 페이지-->
+	<div class="container">
+		<div class="sb-nav-fixed">
+
+			<main class="mt-5 pt-5">
+				<div class="container-fluid px-4">
+					<h1>커뮤니티</h1><br>
+					<hr>
+					<strong>전체글</strong><br><br>
+
+					<div class="card mb-4">
+						<div class="card-body">
+							<form method="post">
+
+								<!--제목 영역-->
+								<div class="mb-3">
+									<div class="container">
+										<div class="row">
+											<div class="col-6">
+												<label for="title" class="form-label">제목</label>
+											</div>
+											<div class="col-6 text-end">
+												<label for="title" class="form-label">작성자: 이현재</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="card mb-2">
+										<div class="card-body">
+											강화도 주연통삼겹 진짜 맛있어요. 꼭 와보세요
+										</div>
+									</div>
+									
+								</div>
+
+								<!--첨부 파일 영역-->
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="첨부파일.txt"
+										aria-label="Recipient's username" aria-describedby="basic-addon2" disabled>
+									<button class="btn btn-outline-secondary">다운로드</a>
+								</div>
+
+								<!--내용 영역-->
+								<div class="mb-3">
+									<label for="title" class="form-label">내용</label>
+									<div class="card">
+										<div class="card-body">
+											주연통삼겹 대표이사 이현재입니다.<br><br><br><br><br><br><br><br><br><br><br><br>
+										</div>
+									</div>
+								</div><br><br>
+
+								<!--좋아요 버튼-->
+								<div class="position-relative">
+									<div class="position-absolute bottom-0 end-0">
+										<button class="btn btn-outline-primary mb-2">좋아요</button>
+										<button class="btn btn-outline-danger mb-2">신고</button>
+									</div>
+								</div><br>
+
+
+								<!--댓글 창-->
+								<div class="mb-3">
+									<label for="content" class="form-label">댓글을 작성해보세요</label>
+									<textarea class="form-control" id="content" name="content" rows="2"></textarea>
+								</div><br><br>
+								<!--등록 버튼-->
+								<div class="position-relative">
+									<div class="position-absolute bottom-0 end-0">
+										<button class="btn btn-outline-primary">댓글 등록</a>
+									</div>
+								</div><br>
+
+								<!--댓글 창-->
+								<hr><strong>작성된 댓글</strong><br>
+								<hr>
+								<div class="card" style="width:100%;">
+									<div class="card-header d-flex justify-content-between align-items-center">
+										<span>작성자 : 이현재</span>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											에이콘 학원생들은 음료수 서비스!
+											<div class="btn-group">
+												<button class="btn btn-outline-primary me-2">좋아요</button>
+												<button class="btn btn-outline-danger">신고</button>
+											</div>
+										</li>
+									</ul>
+								</div><br>
+
+								<div class="card" style="width:100%;">
+									<div class="card-header d-flex justify-content-between align-items-center">
+										<span>작성자 : 이현재</span>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											에이콘 학원생들은 음료수 서비스!
+											<div class="btn-group">
+												<button class="btn btn-outline-primary me-2">좋아요</button>
+												<button class="btn btn-outline-danger">신고</button>
+											</div>
+										</li>
+									</ul>
+								</div><br>
+
+								<div class="card" style="width:100%;">
+									<div class="card-header d-flex justify-content-between align-items-center">
+										<span>작성자 : 이현재</span>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											에이콘 학원생들은 음료수 서비스!
+											<div class="btn-group">
+												<button class="btn btn-outline-primary me-2">좋아요</button>
+												<button class="btn btn-outline-danger">신고</button>
+											</div>
+										</li>
+									</ul>
+								</div><br>
+
+								<div class="card" style="width:100%;">
+									<div class="card-header d-flex justify-content-between align-items-center">
+										<span>작성자 : 이현재</span>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											에이콘 학원생들은 음료수 서비스!
+											<div class="btn-group">
+												<button class="btn btn-outline-primary me-2">좋아요</button>
+												<button class="btn btn-outline-danger">신고</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+						</div>
+						</form>
+					</div>
+				</div>
 		</div>
-	</nav>
-	</header>
-	
-	<!--내용-->
-    <div class="board_wrap">
-        <div class="board_title">
-            <strong>커뮤니티</strong>
-            <p>자유롭게 대화해보세요!</p>
-        </div>
-        <div class="board_view_wrap">
-            <div class="board_view">
-                <div class="title">
-                    글 제목이 들어갑니다.
-                </div>
-                <div class="info">
-                    <dl>
-                        <dt>번호</dt>
-                        <dd>1</dd>
-                    </dl>
-                    <dl>
-                        <dt>글쓴이</dt>
-                        <dd>글쓴이</dd>
-                    </dl>
-                    <dl>
-                        <dt>작성일</dt>
-                        <dd>2023.01.01</dd>
-                    </dl>
-                    <dl>
-                        <dt>조회</dt>
-                        <dd>33</dd>
-                    </dl>
-                </div>
-                <div class="cont">
-                    글 내용이 들어갑니다<br>
-                    글 내용이 들어갑니다<br>
-                    글 내용이 들어갑니다<br>
-                    글 내용이 들어갑니다<br>
-                    글 내용이 들어갑니다<br>
-                    글 내용이 들어갑니다<br>
-                    글 내용이 들어갑니다<br>
-                    글 내용이 들어갑니다
-                </div>
-            </div>
-            <div class="bt_wrap">
-                <a href="community_list.html" class="on">목록</a>
-                <a href="community_edit.html">수정</a>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+		</main>
+
+	</div>
+	</div>
+
 </body>
+
 </html>
+
+<!--부트스트랩-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+	crossorigin="anonymous"></script>
+<!-- header js 연결-->
+<script src="../../assets/js/header.js"></script>

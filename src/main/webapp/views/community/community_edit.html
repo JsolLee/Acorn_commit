@@ -1,144 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>커뮤니티 글 수정</title>
-     <!-- css -->
-    <link rel="stylesheet" href="../../assets/css/community_css.css">
-    <link href="../../assets/css/header.css" rel="stylesheet"/>
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>커뮤니티 글 수정</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+		integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+		crossorigin="anonymous"></script>
+
+	<link href="../../assets/css/header.css" rel="stylesheet">
+
 </head>
+
 <body>
 	<!--상단 메뉴 바-->
+	<div id="header">
 
-	<header>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<div class="container-fluid" class="text-light">
-			<a class="navbar-brand" href="#">COMMIT</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse  justify-content-between" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#"></a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							뉴스
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">IT 이슈</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">국내 기업</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">대외 활동</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">채용 공고</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							커뮤니티
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">이직/신입</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">자소서</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">면접</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">합격자조언</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">구인/구직</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="join.html">회원가입</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="login.html">로그인</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	</header>
-	
-	<div class="header">
-		
 	</div>
-    <div class="board_wrap">
-        <div class="board_title">
-            <strong>커뮤니티</strong>
-            <p>자유롭게 대화해보세요!</p>
-        </div>
-        <div class="board_write_wrap">
-            <div class="board_write">
-                <div class="title">
-                    <dl>
-                        <dt>제목</dt>
-                        <dd><input type="text" placeholder="제목 입력" value="글 제목이 들어갑니다"></dd>
-                    </dl>
-                </div>
-                <div class="info">
-                    <dl>
-                        <dt>글쓴이</dt>
-                        <dd><input type="text" placeholder="글쓴이 입력" value="글쓴이"></dd>
-                    </dl>
-                    <dl>
-                        <dt>비밀번호</dt>
-                        <dd><input type="password" placeholder="비밀번호 입력" value="1234"></dd>
-                    </dl>
-                </div>
-                <div class="cont">
-                    <textarea placeholder="내용 입력">
-글 내용이 들어갑니다.
-글 내용이 들어갑니다.
-글 내용이 들어갑니다.
-글 내용이 들어갑니다.
-글 내용이 들어갑니다.
-글 내용이 들어갑니다.
-글 내용이 들어갑니다.
-글 내용이 들어갑니다.</textarea>
-                </div>
-            </div>
-            <div class="bt_wrap">
-                <a href="community_view.html" class="on">수정</a>
-                <a href="community_view.html">취소</a>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
 
+	<div class="container">
+		<div class="sb-nav-fixed">
+
+			<main class="mt-5 pt-5">
+				<div class="container-fluid px-4">
+					<h1>글 수정 페이지</h1><br>
+					<hr>
+					<!--카테고리 선택 박스-->
+					<select class="form-select" aria-label="Default select example">
+						<option selected>카테고리를 선택해주세요</option>
+						<option value="1">구인/구직</option>
+						<option value="2">이직/신입</option>
+						<option value="3">면접</option>
+						<option value="4">자소서</option>
+						<option value="5">합격자조언</option>
+					</select><br>
+
+					<div class="card mb-4">
+						<div class="card-body">
+							<form method="post">
+
+								<div class="mb-3">
+									<label for="title" class="form-label">제목</label>
+									<input type="text" class="form-control" id="title" name="title" placeholder="강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요">
+								</div>
+								<div class="mb-3">
+									<label for="content" class="form-label">내용</label>
+									<textarea class="form-control" id="content" name="content" rows="15">주연통삼겹 대표이사 이현재입니다.</textarea>
+								</div>
+
+								<!--첨부 파일 영역-->
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="첨부파일을 업로드해주세요"
+										aria-label="Recipient's username" aria-describedby="basic-addon2" disabled>
+									<button class="btn btn-outline-secondary">첨부파일 업로드</a>
+								</div><br><br>
+
+								<!--수정 버튼-->
+								<div class="position-relative">
+									<div class="position-absolute bottom-0 end-0">
+										<button class="btn btn-outline-primary">수정</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</main>
+
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
 </body>
+
 </html>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+	crossorigin="anonymous"></script>
 <!-- header js 연결-->
 <script src="../../assets/js/header.js"></script>

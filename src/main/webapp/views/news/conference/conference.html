@@ -6,9 +6,9 @@
     <title>대외 활동</title>
 
 	<!--conference.css 참조-->
-	<link rel="stylesheet" href="../../../assets/css/news/conference.CSS" />
+	<link rel="stylesheet" href="Acorn_commit/src/main/webapp/assets/css/news/conference.css" />
 
-	<!-- 뉴스 리스트 목록 구현을 위한 cdn 참조-->
+	<!-- issue.html 게시글 구현을 위한 부트 스트랩 참조-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -16,19 +16,27 @@
         
 </head>
 <body>
+	<!-- 상단 부분 가장 인기 많은 게시글 -->
+	<div class="container ">
 
-        <!-- 내용이 들어가는 부분 -->
-        <div class="container">
-            <div class="content">
-    
-            </div>
-        </div>
-        <footer></footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-    
-	<!-- 검색, 정렬 기능 바(임시로 제작) -->
+		<div class="container px-4 py-5">
+			<h3 class="fw-bold">대외 활동</h3>
+			<h2 class="pb-2 border-bottom"></h2>
+
+			<a href="../news_view.html" class="list-group-item list-group-item-action">
+				<div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+					<div class="d-flex flex-column align-items-start gap-2">
+						<img src="./conferenceImages/image11.PNG" width="1200" height="500"  class="img-thumbnail" alt="뉴스1 썸네일"> <br>
+						
+						<h3 class="fw-bold">2023년 클라우드 기반 AI 아이디어 공모전</h3>
+						<p class="text-muted">기존 클라우드 기반 서비스에 AI 기술을 활용한 새로운 비즈니스 아이디어 및 클라우드 기술에 AI 기술을 접목한 비즈니스 확장 모델 등의 아이디어를 제안</p>
+					</div>
+			</a>
+			  	</div>
+		</div>
+	</div>
+
+	<!-- 하나의 화면 세션-->
 	<section class="container mt-4">
 		<div class="list-group">
 			<div class="list-group">
@@ -48,6 +56,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- 대외활동 목록 -->
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-md-1">

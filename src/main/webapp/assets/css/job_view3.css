@@ -1,6 +1,5 @@
-
-#img {
-    background-image: url("../images/job_view/one.jpg");
-    width: 1000px;
-    height: 6000px;
+#map {
+    width: auto;
+    height: 350px;
+    position: relative;
 }

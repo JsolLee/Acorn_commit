@@ -8,8 +8,7 @@ li{
 }
 
 main {
-  height: 100vh;
-  /* height: -webkit-fill-available; */
+  height:calc(100vh - 200px);
   max-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
@@ -22,7 +21,6 @@ main {
 /* 비밀번호 확인 폼 */
 .password-check-wrap{
   /* border: solid 10px #639ef7; */
-  height: 88%;
   width: 100%;
   margin: auto;
 }

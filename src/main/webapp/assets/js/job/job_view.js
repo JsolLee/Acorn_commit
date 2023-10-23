@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (isFollowed) {
             interestedCompany.innerHTML = '<i class="bi bi-heart me-2"></i>관심 기업';
         } else {
-            interestedCompany.innerHTML = 'Followed!';
+            interestedCompany.innerHTML = 'followed!';
         }
         isFollowed = !isFollowed; // 상태를 토글
     }
@@ -34,15 +34,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // save 요소를 가져옴
+    // "스크랩" 버튼을 가져옴
     const saveButton = document.getElementById("save");
     let isSaved = false; // 초기에는 클릭되지 않은 상태
 
     function toggleSave() {
-        if (isSaved) {
-            saveButton.innerHTML = '<i class="bi bi-star me-2"></i>스크랩</button>';
+        if (!isSaved) {
+            saveButton.innerHTML = '<i class="bi bi-star me-2"></i>스크랩';
         } else {
-            saveButton.innerHTML = 'Saved!';
+            saveButton.innerHTML = '<i class="bi bi-star-fill me-2"></i>Saved!';
         }
         isSaved = !isSaved; // 상태를 토글
     }
@@ -52,30 +52,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 클릭 이벤트를 추가하여 버튼 내용 변경 및 상태 변경
     saveButton.addEventListener("click", toggleSave);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    var copyButton = document.getElementById('copy');
-    var cardText = document.querySelector('.card-text');
-
-    if (copyButton && cardText) {
-        copyButton.addEventListener('click', function () {
-            // 선택 영역을 만들고 텍스트를 복사
-            var range = document.createRange();
-            range.selectNode(cardText);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-
-            try {
-                // 복사 명령 실행
-                document.execCommand('copy');
-                alert('텍스트가 클립보드에 복사되었습니다.');
-            } catch (err) {
-                console.error('텍스트 복사 중 오류가 발생했습니다: ', err);
-            }
-
-            // 선택 영역 제거
-            window.getSelection().removeAllRanges();
-        });
-    }
 });

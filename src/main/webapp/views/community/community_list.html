@@ -17,9 +17,10 @@
     integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
     crossorigin="anonymous"></script>
 
+  <!--부트스트랩 아이콘-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!--폰트어썸 CDN kit-->
   <script src="https://kit.fontawesome.com/1f2563d955.js" crossorigin="anonymous"></script>
-
   <link href="../../assets/css/header.css" rel="stylesheet">
 
   <!--CSS-->
@@ -32,7 +33,7 @@
     }
 
     .page-header {
-      background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../../assets/images/carousel-1.jpg) center center no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../../assets/images/job/job1.jpg) center center no-repeat;
       background-size: cover;
     }
 
@@ -66,165 +67,170 @@
 
     <form class="d-flex">
       <!-- 정렬기준 셀렉트 박스 추가 -->
-      <select class="form-select me-2" aria-label="Sort by">
-        <option value="option1">전체글</option>
-        <option value="option2">구인/구직</option>
-        <option value="option3">이직/신입</option>
-        <option value="option4">면접</option>
-        <option value="option5">자소서</option>
-        <option value="option6">합격자조언</option>
-      </select>
+      <div class="col-md-6">
+        <select class="form-select" aria-label="Sort by">
+          <option value="option1">전체글</option>
+          <option value="option2">구인/구직</option>
+          <option value="option3">이직/신입</option>
+          <option value="option4">면접</option>
+          <option value="option5">자소서</option>
+          <option value="option6">합격자조언</option>
+        </select>
+      </div>
 
-      <!-- 검색 입력 필드 -->
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
-      <!-- 검색 버튼 -->
-      <button class="btn btn-outline-primary" type="submit">Search</button>
+      <!-- 검색 입력 필드와 버튼을 감싸는 부분 -->
+      <div class="col-md-6 d-flex">
+        <!-- 검색 입력 필드 -->
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <!-- 검색 버튼 -->
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </div>
     </form>
-
     <div class="container mt-5">
       <table class="table table-hover">
-        <!--
-          <colgroup>
-              <col style="width: 6%;"> 
-              <col style="width: 70%;"> 
-              <col style="width: 15%;"> 
-              <col style="width: 15%;"> 
-          </colgroup>-->
         <thead>
           <tr>
-            <th scope="col">작성자</th>
-            <th scope="col" class="text-center">글 제목</th>
-            <th scope="col">작성일</th>
-            <th scope="col">조회수</th>
-            <th scope="col">댓글수</th>
-            <th scope="col">좋아요수</th>
+            <th scope="col" class="col-md-2" style="padding-left: 50px;">작성자</th>
+            <th scope="col" class="col-md-6 text-center">글 제목</th>
+            <th scope="col" class="col-md-2">작성일</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
-          </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
             </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+
+          <!--제목과 아이콘이 떨어진 컨셉
+          <tr onclick="window.location.href='../community_list copy.html';">
+            <td class="col-md-2">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
+            <td class="col-md-2">
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
+          </tr>-->
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <tr>
-            <td>이현재</td>
-            <td class="text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요</td>
-            <td>23.10.19</td>
-            <td>100</td>
-            <td>100</td>
-            <td><i class="fa-solid fa-heart" style="color: #e12323;">100</i></td>
+          <tr onclick="window.location.href='../community/community_view copy.html';">
+            <td class="col-md-2" style="padding-left: 50px;">이현재</td>
+            <td class="col-md-8 text-center">강화도 주연통삼겹 진짜 맛있어요 꼭 와보세요&nbsp;&nbsp;
+              <i class="bi bi-eye"></i>100&nbsp;
+              <i class="bi bi-heart-fill" style="color:red"></i>100&nbsp;
+              <i class="bi bi-chat"></i>100
+            </td>
+            <td class="col-md-2">23.10.19</td>
           </tr>
-          <!-- ... (other table rows) ... -->
         </tbody>
       </table>
     </div>
-    <div class="d-flex justify-content-end">
-      <button type="button" class="btn btn-primary" style="float:right">글쓰기</button>
-    </div>
+    <a href="../community/community_post.html">
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-primary" style="float:right">글쓰기</button>
+      </div>
+    </a>
   </div>
 
-  <div class="d-flex justify-content-center">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item"><a class="page-link" href="#">5</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
+  <!-- 페이징 -->
 
-      </ul>
-    </nav>
+  <div id="pagination">
+
   </div>
 
+  <div id="footer">
+
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/GrowMark-1.0.0/lib/wow/wow.min.js"></script>
+  <script src="../../assets/GrowMark-1.0.0/lib/easing/easing.min.js"></script>
+  <script src="../../assets/GrowMark-1.0.0/lib/waypoints/waypoints.min.js"></script>
+  <script src="../../assets/GrowMark-1.0.0/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../../assets/GrowMark-1.0.0/lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="../../assets/GrowMark-1.0.0/js/main.js"></script>
 
 
 
 </body>
+<!-- header, pagination js, footer 연결-->
+<script src="../../assets/js/header.js"></script>
+<script src="../../assets/js/pagination.js"></script>
+<script src="../../assets/js/footer.js"></script>
 
 </html>
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-<!-- header js 연결-->
-<script src="../../assets/js/header.js"></script>

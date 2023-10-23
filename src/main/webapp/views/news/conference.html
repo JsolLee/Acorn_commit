@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT 이슈</title>
+    <title>대외 활동</title>
 
-	<!--header.css, issue.css 참조-->
-	<link href="../../../assets/css/news/issue.css" rel="stylesheet" />
-    <link href="../../../assets/css/header.css" rel="stylesheet"/>
-	<link rel="stylesheet" href="../../../assets/css/footer.css">
-
+	<!-- css 참조-->
+	<link href="../../assets/css/news/conference.CSS" rel="stylesheet" />
+    <link href="../../assets/css/header.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../../assets/css/footer.css">
+	 <!-- Bootstrap CSS -->
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	 
 
 	<!-- issue.html 게시글 구현을 위한 부트 스트랩 참조-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-
-	
+     
 </head>
 <body>
 	<div id="header">
@@ -27,16 +28,16 @@
 	<div class="container ">
 
 		<div class="container px-4 py-5">
-			<h3 class="fw-bold">IT 이슈</h3>
+			<h3 class="fw-bold">대외 활동</h3>
 			<h2 class="pb-2 border-bottom"></h2>
 
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
 					<div class="d-flex flex-column align-items-start gap-2">
-						<img src="./issueImages/image11.png" width="1200" height="500" class="img-thumbnail"alt="뉴스1 썸네일"> <br>
-					
-						<h3 class="fw-bold">챗GPT 확장 프로그램 10가지로 꾀하는 크롬 브라우저의 변신</h3>
-						<p class="text-muted">챗GPT는 2022년 출시 직후부터 엄청난 인기를 끌었다. 수많은 사용자가 챗봇의 기능을 살펴보기 위해 몰려들었고 이제 챗GPT 서비스는 확고하게 자리를 잡았다. 한편, 구글과 구글의 브라우저 크롬은 오래전부터 세계적으로 유명한 이름이다.</p>
+						<img src="./conferenceImages/image11.PNG" width="1200" height="500"  class="img-thumbnail" alt="뉴스1 썸네일"> <br>
+						
+						<h3 class="fw-bold">2023년 클라우드 기반 AI 아이디어 공모전</h3>
+						<p class="text-muted">기존 클라우드 기반 서비스에 AI 기술을 활용한 새로운 비즈니스 아이디어 및 클라우드 기술에 AI 기술을 접목한 비즈니스 확장 모델 등의 아이디어를 제안</p>
 					</div>
 			</a>
 			  	</div>
@@ -126,11 +127,9 @@
 			</div>
 			<hr/>
 		</div>
-		<!-- 검색, 정렬바-->
 		<div class="list-group">
 			<div class="list-group">
 				<div class="row justify-content-end">
-
 					<!-- 검색 -->
 					<div class="col-md-4">
 						<input type="text" class="form-control" placeholder="검색">
@@ -146,65 +145,28 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- IT이슈 뉴스 목록-->
+			<!-- 대외활동 목록 -->
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-md-1">
-						<img src="./issueImages/image1.jpg" class="img-fluid" alt="뉴스1 썸네일">
+						<img src="./conferenceImages/image1.jpg" class="img-fluid" alt="대외활동1 썸네일">
 					</div>
 					<div class="col-md-10">
-						<div class="fw-bold">"클라우드 시장 확대하자"…KT클라우드, 이노그리드와 협력</div>
-						<p class="news-content">KT클라우드가 클라우드 컴퓨팅 전문기업 이노그리드와 '클라우드 시장 확대를 위한 공동 …</p>
-						<p class="news-mediaCompany">뉴스1</p>
+						<div class="fw-bold">2023 ETRI 오픈 API 활용사례 공모전</div>
+						<p class="conference-content">ETRI  오픈 API/학습데이터/학습 모델을 활용한 우수사례 발굴</p>
+						<p class="conference-content-date">2023-10-05 00:00 ~ 2023-10-25 00:00</p>
 					</div>
 				</div>
 			</a>
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-md-1">
-						<img src="./issueImages/image2.jpg" class="img-fluid" alt="뉴스2 썸네일">
+						<img src="./conferenceImages/image2.jpg" class="img-fluid" alt="대외활동2 썸네일">
 					</div>
 					<div class="col-md-10">
-						<div class="fw-bold">[Let's 스타트업] 자율주행 드론, 美 물류창고에 수출</div>
-						<p class="news-content">브룩허스트거라지 올해 초 북미 최초로 드론을 활용한 재고관리 자동화 상업 서비스에 성…</p>
-						<p class="news-mediaCompany">매일경제</p>
-					</div>
-				</div>
-			</a>
-			<a href="../news_view.html" class="list-group-item list-group-item-action">
-				<div class="row">
-					<div class="col-md-1">
-						<img src="./issueImages/image3.jpg" class="img-fluid" alt="뉴스3 썸네일">
-					</div>
-					<div class="col-md-10">
-						<div class="fw-bold">1.8m 높이서 갤Z폴드·아이폰15 수직낙하했더니.. 예상외로 '이 기기' 멀쩡했…</div>
-						<p class="news-content">“애플의 최신형 스마트폰 '아이폰15 프로 맥스'와 삼성의 '갤럭시 Z폴드5'의 낙 …</p>
-						<p class="news-mediaCompany">파이낸셜뉴스</p>
-					</div>
-				</div>
-			</a>
-			<a href="../news_view.html" class="list-group-item list-group-item-action">
-				<div class="row">
-					<div class="col-md-1">
-						<img src="./issueImages/image4.jpg" class="img-fluid" alt="뉴스4 썸네일">
-					</div>
-					<div class="col-md-10">
-						<div class="fw-bold">32세에 재산 1조원대 日 사업가 “AI로 후계자 못 구해 폐업하는 기업 없게"</div>
-						<p class="news-content">MA종합연구소 창립자 사가미 순사쿠, 블룸버그·포브스도 집중 조명 WEEKLY …</p>
-						<p class="news-mediaCompany">조선일보 </p>
-					</div>
-				</div>
-			</a>
-			<a href="../news_view.html" class="list-group-item list-group-item-action">
-				<div class="row">
-					<div class="col-md-1">
-						<img src="./issueImages/image5.jpg" class="img-fluid" alt="뉴스5 썸네일">
-					</div>
-					<div class="col-md-10">
-						<div class="fw-bold">개발자 69% "주4일 근무보다 중요한 건 연봉 유지" </div>
-						<p class="news-content">경력직 개발자들은 근로시간 단축보다 현재 연봉 수준 유지를 더 중요하게 생각한다는 …</p>
-						<p class="news-mediaCompany">디지털타임스</p>
+						<div class="fw-bold">2023년 용인시 해커톤</div>
+						<p class="conference-content">트위터 텍스트에 포함된 감성(neutral, positive, negative)을 적절히 분류하는 AI모델을 개발</p>
+						<p class="conference-content-date">2023-09-22 00:00 ~ 2023-10-18 10:00</p>
 					</div>
 				</div>
 			</a>
@@ -212,12 +174,12 @@
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-md-1">
-						<img src="./issueImages/image6.jpg" class="img-fluid" alt="뉴스6 썸네일">
+						<img src="./conferenceImages/image3.jpg" class="img-fluid" alt="대외활동3 썸네일">
 					</div>
 					<div class="col-md-10">
-						<div class="fw-bold">'모바일 RPG'에 돈 몰리는 韓 게임 시장…MMO는 주춤</div>
-						<p class="news-content">한국 모바일 게임 시장이 역할수행게임(RPG) 장르에 편중된 것으로 나타났다. 한 … </p>
-						<p class="news-mediaCompany">뉴시스</p>
+						<div class="fw-bold">화학안전 AI 그림 공모전</div>
+						<p class="conference-content">화학안전을 키워드로 자유롭게 그림 생성</p>
+						<p class="conference-content-date">2023-10-10 00:00 ~ 2023-10-27 18:00</p>
 					</div>
 				</div>
 			</a>
@@ -225,12 +187,12 @@
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-md-1">
-						<img src="./issueImages/image7.jpg" class="img-fluid" alt="뉴스7 썸네일">
+						<img src="./conferenceImages/image4.png" class="img-fluid" alt="대외활동4 썸네일">
 					</div>
 					<div class="col-md-10">
-						<div class="fw-bold">삼성, '스마트싱스' 생태계 키운다</div>
-						<p class="news-content">삼성전자가 '갤럭시 스마트태그2'를 통해 스마트태그 시장을 지속 공략한다. 스마 …</p>
-						<p class="news-mediaCompany">비즈워치</p>
+						<div class="fw-bold">제6회 LG소셜캠퍼스 1분1초영화제</div>
+						<p class="conference-content">습지, 강, 호수 등 물 생테계 보호…</p>
+						<p class="conference-content-date">2023-08-16 00:00 ~ 2023-10-10 18:00</p>
 					</div>
 				</div>
 			</a>
@@ -238,12 +200,12 @@
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-md-1">
-						<img src="./issueImages/image8.jpg" class="img-fluid" alt="뉴스8 썸네일">
+						<img src="./conferenceImages/image5.jpeg" class="img-fluid" alt="대외활동5 썸네일">
 					</div>
 					<div class="col-md-10">
-						<div class="fw-bold">아이폰15 '손난로' 오명 벗을까...애플, iOS 17 업데이트 시작</div>
-						<p class="news-content">애플이 '아이폰15' 발열 문제를 해결하기 위해 OS(운영체제) 업데이트를 실시했다. 발열 … </p>
-						<p class="news-mediaCompany">머니투데이</p>
+						<div class="fw-bold">[HD 한국조선해양 AI center / 데이콘] HD 현대 AI Challenge</div>
+						<p class="conference-content">항만 內 선박 대기 시간 예측을 위한 선박 항차 데이터 분석 AI 알고리즘 개발</p>
+						<p class="conference-content-date">2023-09-25 10:00 ~ 2023-10-30 09:59</p>
 					</div>
 				</div>
 			</a>
@@ -251,12 +213,12 @@
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-md-1">
-						<img src="./issueImages/image9.jpg" class="img-fluid" alt="뉴스9 썸네일">
+						<img src="./conferenceImages/image6.jpeg" class="img-fluid" alt="대외활동6 썸네일">
 					</div>
 					<div class="col-md-10">
-						<div class="fw-bold">토종 AI 반도체, 삼성전자 우군으로…스타트업 '중동 공략'은 순항 [Geeks' Briefing]</div>
-						<p class="news-content">이 기사는 프리미엄 스타트업 미디어 플랫폼 한경 긱스에 게재된 기사입니다. 한국경제… </p>
-						<p class="news-mediaCompany">한국경제</p>
+						<div class="fw-bold">충청권 게임 인디유 공모전</div>
+						<p class="conference-content">출시 이력 없는 신규 게임</p>
+						<p class="conference-content-date">2023-10-25 00:00 ~ 2023-10-31 15:00</p>
 					</div>
 				</div>
 			</a>
@@ -264,18 +226,55 @@
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-md-1">
-						<img src="./issueImages/image10.jpg" class="img-fluid" alt="뉴스10 썸네일">
+						<img src="./conferenceImages/image7.jpeg" class="img-fluid" alt="대외활동7 썸네일">
 					</div>
 					<div class="col-md-10">
-						<div class="fw-bold">중국 응원에 농락당한 ‘다음’…‘매크로’ 규제, 업계 반응은?</div>
-						<p class="news-content">다음, 매크로 응원 조작에 ‘여론조작’ 규제 필요성↑ 업계, 취지 공감하면서도 “명확한 기… </p>
-						<p class="news-mediaCompany">매일경제</p>
+						<div class="fw-bold">2023 국방 AI 경진대회</div>
+						<p class="conference-content">국방 AI 기술 발전에 대한 국민적 관심 유도 및 장병들 …</p>
+						<p class="conference-content-date">2023-09-19 00:00 ~ 2023-10-12 00:00</p>
+					</div>
+				</div>
+			</a>
+	
+			<a href="../news_view.html" class="list-group-item list-group-item-action">
+				<div class="row">
+					<div class="col-md-1">
+						<img src="./conferenceImages/image8.jpeg" class="img-fluid" alt="대외활동8 썸네일">
+					</div>
+					<div class="col-md-10">
+						<div class="fw-bold">2023 서울지능형 사물인터넷(AIOT) 해커톤</div>
+						<p class="conference-content">한강공원에서 활용 가능한 서비스 발굴</p>
+						<p class="conference-content-date">2023-08-25 00:00 ~ 2023-10-02 18:00</p>
+					</div>
+				</div>
+			</a>
+	
+			<a href="../news_view.html" class="list-group-item list-group-item-action">
+				<div class="row">
+					<div class="col-md-1">
+						<img src="./conferenceImages/image9.png" class="img-fluid" alt="대외활동9 썸네일">
+					</div>
+					<div class="col-md-10">
+						<div class="fw-bold">2023년 NABIS 균형발전 빅데이터 분석 공모전</div>
+						<p class="conference-content">균형발전 빅데이터를 활용한 새로운 지방시대 도약</p>
+						<p class="conference-content-date">2023-09-08 00:00 ~ 2023-09-27 23:59</p>
+					</div>
+				</div>
+			</a>
+	
+			<a href="../news_view.html" class="list-group-item list-group-item-action">
+				<div class="row">
+					<div class="col-md-1">
+						<img src="./conferenceImages/image10.jpeg" class="img-fluid" alt="대외활동10 썸네일">
+					</div>
+					<div class="col-md-10">
+						<div class="fw-bold">2023 제2회 SW개발 공모전</div>
+						<p class="conference-content">서울시 성동구와 관련한 다양한 문제(교통,환경,안전,보건,시설 등) 해결을 주제로 솔루션…</p>
+						<p class="conference-content-date">2023-09-04 00:00 ~ 2023-10-03 23:59</p>
 					</div>
 				</div>
 			</a>
 		</div>
-
-		<!-- 목록 페이징 넘버-->
 		<br><br><br>
 		<div class ="Page navigation">
 			<nav aria-label="Page navigation example">
@@ -299,27 +298,20 @@
 				</ul>
 			  </nav>
 		</div>
+	</section>
+	 <!-- footer -->
+	 <div id="footer">
 		
-	 
-		</section>
+	 </div>
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-		 <!-- footer -->
-		 <div id="footer">
-		
-		 </div>
-	<!-- Bootstrap JS and jQuery -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-	<!-- header JS -->
-	<script src="../../../assets/js/header.js"></script>
+<!-- header JS -->
+<script src="../../assets/js/header.js"></script>
 
- 	<!-- footer JS : html 태그 안에다가 넣어야지 실행이 됩니다!-->
-	<script src="../../../assets/js/footer.js"></script>
-
-	
-	
-	
+ <!-- footer JS : html 태그 안에다가 넣어야지 실행이 됩니다!-->
+<script src="../../assets/js/footer.js"></script>
 </body>
 </html>

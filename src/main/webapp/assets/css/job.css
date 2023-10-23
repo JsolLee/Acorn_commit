@@ -79,7 +79,7 @@ footer,header,hgroup,main,nav,section{
 }
 
 .filter-wrap .navbar .navbar-collapse{
-  padding-left: 90px;
+  padding-left: 50px;
 }
 
 .filter-wrap .navbar .nav-item{
@@ -105,12 +105,20 @@ footer,header,hgroup,main,nav,section{
 	justify-content: space-around;
 } */
 
+.navbar-expand-lg .navbar-collapse{
+	justify-content: space-around !important;	
+}
+
 .filter-wrap .navbar-brand{
 	color: #4761FF !important;
 }
 
 .filter-wrap .btn-group{
 	display: block !important;
+}
+
+.filter-wrap .me-2{
+	width: 318px;
 }
 
 /* 채용 공고 리스트 */
@@ -159,7 +167,7 @@ footer,header,hgroup,main,nav,section{
 }
 
 .main-container .job-list .list-group-li .list-group-conditions{
-  width: 132px;
+  width: 150px;
   height: 50px;
   font-size: 17px;
   text-align: center;

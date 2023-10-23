@@ -1,0 +1,13 @@
+/* 댓글 크기 조절 */
+
+.fixed-width {
+    width: 200px;  
+}
+
+.fixed-height {
+    line-height: 25%;
+} 
+
+.fixed-underline {
+    text-decoration-line: none;
+}

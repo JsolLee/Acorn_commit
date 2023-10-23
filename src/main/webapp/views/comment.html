@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head class="comment">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>comment</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- comment CSS -->
+<link rel="stylesheet" href="../assets/css/comment.css">
+
+</head>
+<body>
+<!-- 댓글 -->
+<div class="my-5">
+<!-- 댓글 총 개수, 댓글 페이징 -->
+<section class="container border p-3 my-4 rounded">
+	<div class="d-flex justify-content-between align-items-center">
+		<span class="font-weight-bold text-primary">댓글 총 개수: ---개</span>
+		<!-- 댓글 페이징 기능 -->
+		<div>
+			<a href="#page1" class="btn btn-outline-primary btn-sm mr-1">1</a>
+			<a href="#page2" class="btn btn-outline-primary btn-sm mr-1">2</a>
+			<a href="#page3" class="btn btn-outline-primary btn-sm mr-1">3</a>
+			<a href="#nextPage" class="btn btn-primary btn-sm">다음</a>
+		</div>
+	</div>
+</section>
+<br>
+
+<!-- 댓글 작성 -->
+<section class="container">
+	<div class="card-body">
+		<form class="form-horizontal">
+		<div class="row">
+			<div class="form-floating col-sm-10">
+				<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 30px"></textarea>
+				<label for="floatingTextarea2" style="padding-left: 2rem;">Comment</label>
+			</div>
+			<div class="form-group col-sm-2 text-center">
+			<button type="button" class="btn btn-lg btn-primary btn-sm btn-block replyAddBtn">
+			<i class="fa fa-save"></i> 게시
+			</button>
+			</div>
+		</div>	
+		</form>	
+	</div>
+</section>
+
+<!-- 댓글 보기 -->
+<section class="container mt-4">
+	<div class="card p-4">
+		<div class="d-flex justify-content-between mb-3">
+			<div>
+				<div class="d-flex justify-content-between mb-2 fixed-width">
+					<h5 class="card-subtitle text-body-secondary">이진솔</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h7 class="text-text-body-secondary">2023-10-23</h7>
+				</div>
+				<hr class="fixed-width" />
+				<p class="card-text">여러분 커밋합시다!</p>	
+			</div>
+			<div class="align-self-start">
+				<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+				<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+				<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="d-flex">
+		<div class="ml-auto card p-4" style="width: 100%;">
+			<div class="d-flex justify-content-between mb-3">
+				<div>
+					<div class="d-flex justify-content-between mb-2">
+						<b><a href="#" class="fixed-underline">@이진솔</a></b>
+					</div>
+					<br>
+					<div class="d-flex justify-content-between mb-2 fixed-width">
+						<h5 class="card-subtitle text-body-secondary">김사라</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<h7 class="text-text-body-secondary">2023-10-24</h7>
+					</div>
+					<hr class="fixed-width" />
+					<p class="card-text">알겠습니다!</p>
+				</div>
+				<div class="align-self-start">
+					<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+					<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+					<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="d-flex">
+		<div class="ml-auto card p-4" style="width: 100%;">
+			<div class="d-flex justify-content-between mb-3">
+				<div>
+					<div class="d-flex justify-content-between mb-2">
+						<b><a href="#" class="fixed-underline">@이진솔</a></b>
+					</div>
+					<br>
+					<div class="d-flex justify-content-between mb-2 fixed-width">
+						<h5 class="card-subtitle text-body-secondary">이진우</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<h7 class="text-text-body-secondary">2023-10-24</h7>
+					</div>
+					<hr class="fixed-width" />
+					<p class="card-text">알겠습니다 팀장님!</p>
+				</div>
+				<div class="align-self-start">
+					<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+					<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+					<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="d-flex">
+		<div class="ml-auto card p-4" style="width: 100%;">
+			<div class="d-flex justify-content-between mb-3">
+				<div>
+					<div class="d-flex justify-content-between mb-2">
+						<b><a href="#" class="fixed-underline">@이진솔</a></b>
+					</div>
+					<br>
+					<div class="d-flex justify-content-between mb-2 fixed-width">
+						<h5 class="card-subtitle text-body-secondary">김경륜</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<h7 class="text-text-body-secondary">2023-10-25</h7>
+					</div>
+					<hr class="fixed-width" />
+					<p class="card-text">헛 제가 늦게 봤네요. 커밋하도록 하겠습니다!</p>
+				</div>
+				<div class="align-self-start">
+					<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+					<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+					<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="d-flex">
+		<div class="ml-auto card p-4" style="width: 100%;">
+			<div class="d-flex justify-content-between mb-3">
+				<div>
+					<div class="d-flex justify-content-between mb-2">
+						<b><a href="#" class="fixed-underline">@이진솔</a></b>
+					</div>
+					<br>
+					<div class="d-flex justify-content-between mb-2 fixed-width">
+						<h5 class="card-subtitle text-body-secondary">최예슬이</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<h7 class="text-text-body-secondary">2023-10-25</h7>
+					</div>
+					<hr class="fixed-width" />
+					<p class="card-text">저도 곧바로 하도록 하겠습니다!</p>
+				</div>
+				<div class="align-self-start">
+					<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+					<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+					<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="d-flex">
+		<div class="ml-auto card p-4" style="width: 100%;">
+			<div class="d-flex justify-content-between mb-3">
+				<div>
+					<div class="d-flex justify-content-between mb-2">
+						<b><a href="#" class="fixed-underline">@이진솔</a></b>
+					</div>
+					<br>
+					<div class="d-flex justify-content-between mb-2 fixed-width">
+						<h5 class="card-subtitle text-body-secondary">이현재</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<h7 class="text-text-body-secondary">2023-10-25</h7>
+					</div>
+					<hr class="fixed-width" />
+					<p class="card-text">팀장님, 그런데 커밋은 어떻게 하나요?</p>
+				</div>
+				<div class="align-self-start">
+					<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+					<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+					<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="d-flex">
+		<div class="ml-auto card p-4" style="width: 100%;">
+			<div class="d-flex justify-content-between mb-3">
+				<div>
+					<div class="d-flex justify-content-between mb-2">
+						<b><a href="#" class="fixed-underline">@이현재</a></b>
+					</div>
+					<br>
+					<div class="d-flex justify-content-between mb-2 fixed-width">
+						<h5 class="card-subtitle text-body-secondary">이성길</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<h7 class="text-text-body-secondary">2023-10-25</h7>
+					</div>
+					<hr class="fixed-width" />
+					<p class="card-text">현재야, 내가 알려줄께 디스코드로 들어와</p>
+				</div>
+				<div class="align-self-start">
+					<button class="btn btn-outline-success btn-sm me-md-2" type="button"><i class="fa fa-thumbs-up"></i><i class="bi bi-hand-thumbs-up"></i></button>
+					<button class="btn btn-outline-warning btn-sm me-md-2" type="button"><i class="fa fa-bookmark"></i><i class="bi bi-clipboard"></i></button>
+					<button class="btn btn-outline-danger btn-sm me-md-2" type="button"><i class="fa fa-exclamation-triangle"></i><i class="bi bi-cone-striped"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

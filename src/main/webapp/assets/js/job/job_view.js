@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // interested_company 요소를 가져옴
     const interestedCompany = document.getElementById("interested_company");
-    let isFollowed = false; // 초기에는 클릭되지 않은 상태
+    let isFollowed = true; // 초기에는 클릭되지 않은 상태
 
     // 마우스가 요소 위에 올라갔을 때 아이콘 변경
     interestedCompany.addEventListener("mouseover", function() {
@@ -32,6 +32,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // 클릭 이벤트를 추가하여 버튼 내용 변경 및 상태 변경
     interestedCompany.addEventListener("click", toggleFollow);
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // interested_company 요소를 가져옴
+    const save = document.getElementById("save");
+    let isSaved = true; // 초기에는 클릭되지 않은 상태
+
+    function toggleFollow() {
+        if (isSaved) {
+            save.innerHTML = '<i class="bi bi-star me-2"></i>스크랩';
+        } else {
+            save.innerHTML = '<i class="bi bi-star-fill me-2"></i>Saved!';
+        }
+        isSaved = !isSaved; // 상태를 토글
+    }
+
+    // 초기 버튼 표시
+    toggleFollow();
+
+    // 클릭 이벤트를 추가하여 버튼 내용 변경 및 상태 변경
+    save.addEventListener("click", toggleFollow);
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var copyButton = document.getElementById('copy');

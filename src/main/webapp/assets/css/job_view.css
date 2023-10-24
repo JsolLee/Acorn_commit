@@ -3,6 +3,30 @@
             background-color: white; /* 흰색 바탕 */
             color: #0D6EFD; /* 파랑색 글자 */
         }
+        
+#view {
+    border: none;
+	background-color: white;
+    color: inherit;
+}
+#btn_share {
+    border: none;
+	background-color: white;
+    color: inherit;
+}
+#btn_report {
+    border: none;
+	background-color: white;
+    color: inherit;
+}
+
+#btn_share:hover {
+    color: #0D6EFD;
+}
+#btn_report:hover {
+    color: red;
+}
+        
 #map {
     width: auto;
     height: 350px;
@@ -12,4 +36,5 @@
 #copy {
 	border: none;
 	background-color: white;
+    color: #0D6EFD;
 }

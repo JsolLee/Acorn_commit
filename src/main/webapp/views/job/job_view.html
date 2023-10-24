@@ -1,132 +1,203 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- 설정 및 메타 정보 -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>COMMIT - 채용공고 세부 페이지</title>
 
-        <!-- 외부 리소스 링크 -->
-    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"> <!-- 외부 CSS 파일 링크 -->
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        
-        <!-- 내부 CSS 파일 링크 -->
-        <link rel="stylesheet" href="../../assets/css/job_view.css">
-        <link rel="stylesheet" href="../../assets/css/header.css">
-        <link rel="stylesheet" href="../../assets/css/footer.css">
+<head>
+    <!-- 설정 및 메타 정보 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COMMIT - 채용공고 세부 페이지</title>
 
-        <!-- Bootstrap CSS 파일 링크 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous">
+    <!-- 외부 리소스 링크 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-        <!-- 외부 스크립트 링크 -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" z="anonymous"></script>
-        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f74f65a4e1d1b7fafe7264c820baf6cc"></script> <!-- 카카오맵 API -->
+    <!-- 내부 CSS 파일 링크 -->
+    <link rel="stylesheet" href="../../assets/css/job_view.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
 
-        <!-- 내부 스크립트 링크 -->
-        <script src="../../assets/js/header.js"></script>
-        <script src="../../assets/js/footer.js"></script>
-        <script type="text/javascript" src="../../assets/js/job/job_view_map.js"></script>
-        <script type="text/javascript" src="../../assets/js/job/job_view.js"></script>
-       
-        
-    </head>
 
-    <body onload="initializeMap()">
-        <div id="header"></div> <!-- header -->
+    <!-- 카카오맵 API -->
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f74f65a4e1d1b7fafe7264c820baf6cc"></script>
 
-        <section class="top">
-			
-			<!-- title -->
-            <div class="container">
-                <div class="row mt-5 my-2" id="company_name">
-                    <div id="name" class="col-3 pt-2">(주)진솔<button id="interested_company" class="badge ms-3"><i class="bi bi-heart me-2"></i>관심 기업</button></div>
+
+    <!-- 내부 스크립트 링크 -->
+    <script src="../../assets/js/header.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script type="text/javascript" src="../../assets/js/job/job_view_map.js"></script>
+    <script type="text/javascript" src="../../assets/js/job/job_view.js"></script>
+
+
+</head>
+
+<body onload="initializeMap()">
+    <div id="header"></div> <!-- header -->
+
+    <section class="top">
+
+        <!-- title -->
+        <div class="container">
+            <div class="row mt-5 my-2" id="company_name">
+                <div id="name" class="col-3 pt-2">(주)진솔<button id="interested_company" class="badge ms-3"></button>
                 </div>
-                <div class="row">
-                    <div class="col fs-1 text-nowrap">진솔컴퍼니 백엔드 개발자 채용</div>
+            </div>
+            <div class="row">
+                <div class="col fs-1 text-nowrap">진솔컴퍼니 백엔드 개발자 채용</div>
+            </div>
+            <div class="row justify-content-end text-secondary text-nowrap">
+                <div id="view" class="col-2 btn btn-primary text-end me-3">
+					<i class="bi bi-people-fill me-2"></i>조회수 103
                 </div>
-                <div class="row justify-content-end text-secondary text-nowrap">
-                    <div class="col-2 text-end me-3"><i class="bi bi-people-fill me-2"></i>조회수 103</div>
-                    <div class="col-1"><i class="bi bi-share-fill me-2"></i>공 유</div>
-                    <div class="col-1"><i class="bi bi-cone-striped me-2"></i>신 고</div>
+                <div class="col-1 btn-group dropend">
+                    <button id="btn_share" class="btn btn-primary" data-bs-toggle="dropdown"
+                        data-bs-display="static" aria-expanded="false" ><i class="bi bi-share-fill me-2"></i>공 유</button>
+                    <ul class="dropdown-menu">
+                        <li><button id="share" class="dropdown-item d-block" type="button"><i class="bi bi-discord"></i></button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><button id="share" class="dropdown-item d-block" type="button"><i class="bi bi-facebook"></i></button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><button id="share" class="dropdown-item d-block" type="button"><i
+                                    class="bi bi-google"></i></button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><button id="share" class="dropdown-item d-block" type="button"><i class="bi bi-instagram"></i></button></li>
+                    </ul>
+                </div>
+                <div class="col-1"><button id="btn_report" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                        <i class="bi bi-cone-striped me-2"></i>신 고</button></div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"><i
+                                class="bi bi-cone-striped me-2 text-danger"></i>신고하기</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">사유 선택</label><br>
+                                <select class="form-control" name="report_type">
+                                    <option value="spam">스팸/홍보/도배</option>
+                                    <option value="illegal">불법 정보</option>
+                                    <option value="abuse">욕설/비하/혐오/차별</option>
+                                    <option value="discomfort">불쾌한 내용</option>
+                                    <option value="porn">음란물</option>
+                                    <option value="copyright">저작권</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">내용</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">의견 보내기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- table -->
+        <div class="container-100 text-nowrap">
+
+            <div class="row text-body-tertiarymy-2">
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+            <div class="row justify-content-center fs-5 fw-bold my-2 text-start">
+                <div class="col-4">지원자격</div>
+                <div class="col-4">근무조건</div>
+            </div>
+            <div class="row justify-content-center my-2">
+                <div class="col-1 fw-bold text-start">경 력</div>
+                <div class="col-3 text-secondary">신입</div>
+                <div class="col-1 fw-bold text-start">고용형태</div>
+                <div class="col-3 text-secondary">정규직</div>
+            </div>
+            <div class="row justify-content-center my-2">
+                <div class="col-1 fw-bold text-start">학 력</div>
+                <div class="col-3 text-secondary">학력무관</div>
+                <div class="col-1 fw-bold text-start">급 여</div>
+                <div class="col-3 text-secondary">면접 후 결정</div>
+            </div>
+            <div class="row justify-content-center my-2">
+                <div class="col-1 fw-bold  text-start">핵심역량</div>
+                <div class="col-3 text-secondary">java, Spring, Javascript, python</div>
+                <div class="col-1 fw-bold text-start">지 역</div>
+                <div class="col-3 text-secondary">서울특별시 강남구<a class="badge btn btn-primary ms-2" href="#map">지도 ></a>
                 </div>
             </div>
 
-			<!-- table -->
-            <div class="container-100 text-nowrap">
-              
-                <div class="row text-body-tertiarymy-2">
-                    <div class="col"><hr></div>
-                </div>
-                <div class="row justify-content-center fs-5 fw-bold my-2">
-                    <div class="col-4">지원자격</div>
-                    <div class="col-4">근무조건</div>
-                </div>
-                <div class="row justify-content-center text-center my-2">
-                    <div class="col-1 fw-bold">경  력</div>
-                    <div class="col-3 text-secondary">신입</div>
-                    <div class="col-1 fw-bold">고용형태</div>
-                    <div class="col-3 text-secondary">정규직</div>
-                </div>
-                <div class="row justify-content-center text-center my-2">
-                    <div class="col-1 fw-bold">학  력</div>
-                    <div class="col-3 text-secondary">학력무관</div>
-                    <div class="col-1 fw-bold">급  여</div>
-                    <div class="col-3 text-secondary">면접 후 결정</div>
-                </div>
-                <div class="row justify-content-center text-center my-2">
-                    <div class="col-1 fw-bold">핵심역량</div>
-                    <div class="col-3 text-secondary">java, Spring, Javascript, python</div>
-                    <div class="col-1 fw-bold">지  역</div>
-                    <div class="col-3 text-secondary">서울특별시 강남구<a class="badge btn btn-primary ms-2" href="#map">지도 ></a></div>
-                </div>
-                
-                <div class="row text-body-tertiarymy-2">
-                    <div class="col"><hr></div>
+            <div class="row text-body-tertiarymy-2">
+                <div class="col">
+                    <hr>
                 </div>
             </div>
-            
-            <!-- button -->
-            <div class="container text-nowrap" id="button">
-                <div class="row justify-content-center mt-5">
-                    <div class="col-3"><button type="button" id="apply_site" class="btn btn-primary btn-lg px-4">지원 홈페이지<span class="badge rounded-pill text-bg-light ms-2">D-15</span></button></div>
-                    <div class="col-1"><button type="button" id="save" class="btn btn-outline-primary btn-lg px-4"><i class="bi bi-star me-2"></i>스크랩</button></div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="middle">
-			<div class="container">
-                <div class="row justify-content-center my-5">
-					<div class="row justify-content-center">
-	                    <img src="../../assets/images/job_view/one.jpg" alt="회사 그림">
-	                </div>
-                </div>
-            </div>
-		</section>
-        
-       
-        
-        <section class="bottom">
-			<div class="container">
-				<div class="row justify-content-center my-5">
-	            	<div class="card col-7">
-						<div id="map" class="col-5 my-2" ></div>
-							<div class="card-body">
-						    <p class="card-text">서울특별시 강남구 테헤란로 124 삼원타워 5층 
-								<button id="copy"><i class="bi bi-files"></i></button>
-							</p>
-						    
-						</div>
-					</div>
-	            </div>
-            </div>
-			
-		</section>
+        </div>
 
-		<div id="footer"></div> <!-- header -->
-    </body>
+        <!-- button -->
+        <div class="container text-nowrap" id="button">
+            <div class="row justify-content-center mt-5">
+                <div class="col-3 text-end">
+                    <button type="button" id="apply_site" class="btn btn-primary btn-lg px-4">
+                        지원 홈페이지 <span class="badge rounded-pill text-bg-light ms-2">D-15</span>
+                    </button>
+                </div>
+                <div class="col-2"><button type="button" id="save" class="btn btn-outline-primary btn-lg px-4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="middle">
+        <div class="container">
+            <div class="row justify-content-center my-5">
+                <div class="row justify-content-center">
+                    <img src="../../assets/images/job_view/one.jpg" alt="회사 그림">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="bottom">
+        <div class="container">
+            <div class="row justify-content-center my-5">
+                <div class="card col-7">
+                    <div id="map" class="col-5 my-2"></div>
+                    <div class="card-body">
+                        <p class="card-text">서울특별시 강남구 테헤란로 124 삼원타워 5층
+                            <button id="copy"><i class="bi bi-files"></i></button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="footer"></div> <!-- header -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

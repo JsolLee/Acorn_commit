@@ -16,19 +16,19 @@
 <body>
     <!-- search bar -->
     <section class="container mt-4">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="input-group mb-3 ml-auto">
-                    <!-- 검색 -->
-                    <input type="text" class="form-control me-2 border-primary-subtle" placeholder="검색" aria-label="검색" aria-describedby="basic-addon2" style="flex: 8;">
-                    
+        <div class="row justify-content-end">
+            <div class="col-md-4">
+                <div class="input-group mb-3">
                     <!-- 정렬 -->
-                    <select class="form-control me-2 border-primary-subtle" style="flex: 3;">
+                    <select class="form-control me-2 border-primary-subtle" style="flex: 1;">
                         <option>최신순</option>
                         <option>조회순</option>
                         <option>인기순</option>
                     </select>
-
+                    
+                    <!-- 검색 -->
+                    <input type="text" class="form-control me-2 border-primary-subtle" placeholder="검색" aria-label="검색" aria-describedby="basic-addon2" style="flex: 1;">
+                    
                     <!-- 검색버튼 -->
                     <div class="input-group-append" style="flex: 1;">
                         <button class="btn btn-light btn-outline-primary" type="button"><i class="bi bi-search"></i></button>

@@ -10,6 +10,8 @@
 	<link href="../../assets/css/news/company.CSS" rel="stylesheet" />
     <link href="../../assets/css/header.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="../../assets/css/footer.css">
+	<link rel="stylesheet" href="../../assets/css/search_bar.css">
+	<link rel="stylesheet" href="../../assets/css/pagination.css">
 	 <!-- Bootstrap CSS -->
 	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -130,26 +132,10 @@
 			</div>
 			<hr/>
 		</div>
-		<!-- 검색, 정렬바-->
-		<div class="list-group">
-
-			<div class="list-group">
-				<div class="row justify-content-end">
-					<!-- 검색 -->
-					<div class="col-md-4">
-						<input type="text" class="form-control" placeholder="검색">
-					</div>
-			
-					<!-- 정렬: dropdown -->
-					<div class="col-md-4">
-						<select class="form-control">
-							<option>최신순</option>
-							<option>조회순</option>
-							<option>인기순</option>
-						</select>
-					</div>
-				</div>
-			</div>
+		 <!-- search -->
+		 <div id="search">
+		
+		 </div>
 
 			<!-- 국내 기업 뉴스 목록-->
 			<a href="../news_view.html" class="list-group-item list-group-item-action">
@@ -283,27 +269,8 @@
 			</a>
 		</div>
 		<br><br><br>
-		<div class ="Page navigation">
-			<nav aria-label="Page navigation example">
-				<ul class="pagination pagination-lg justify-content-center">
-				  <li class="page-item">
-					<a class="page-link" href="#" aria-label="Previous">
-					  <span aria-hidden="true">&laquo;</span>
-					</a>
-				  </li>
-				  <li class="page-item"><a class="page-link" href="#">1</a></li>
-				  <li class="page-item"><a class="page-link" href="#">2</a></li>
-				  <li class="page-item"><a class="page-link" href="#">3</a></li>
-				  <li class="page-item"><a class="page-link" href="#">4</a></li>
-				  <li class="page-item"><a class="page-link" href="#">5</a></li>
-				  <li class="page-item"><a class="page-link" href="#">6</a></li>
-				  <li class="page-item">
-					<a class="page-link" href="#" aria-label="Next">
-					  <span aria-hidden="true">&raquo;</span>
-					</a>
-				  </li>
-				</ul>
-			  </nav>
+		<div id="pagination">
+
 		</div>
 	</section>
 	 <!-- footer -->
@@ -320,6 +287,11 @@
 
  <!-- footer JS : html 태그 안에다가 넣어야지 실행이 됩니다!-->
 <script src="../../assets/js/footer.js"></script>
+
+<!-- search JS -->
+<script src="../../assets/js/search.js"></script>
+
+<script src="../../assets/js/pagination.js"></script>
 
 </body>
 </html>

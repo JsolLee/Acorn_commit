@@ -1,5 +1,15 @@
 /* footer css */
 
-.footer_background {
-	color: gainsboro;
+#footer_background {
+	background-color: rgb(219, 239, 250);
+}
+
+#footer_gap1 {
+	height: 180px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#footer_gap2 {
+	height: 25px;
 }

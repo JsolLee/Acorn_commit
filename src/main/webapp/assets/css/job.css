@@ -136,6 +136,11 @@ footer,header,hgroup,main,nav,section{
 
 .main-container .job-list .list-group-li a{
   color: black;
+  margin:auto;
+}
+
+.main-container .job-list .list-group-li .list-group-title a{
+	margin : 0;
 }
 
 .main-container .job-list .list-group-li div{
@@ -144,19 +149,13 @@ footer,header,hgroup,main,nav,section{
   margin-right: 153px;
 }
 
-.main-container .job-list .list-group-li .list-group-idx{
-  width: 23px;
-  height: 50px;
-  font-size: 17px;
-  text-align: center;
-  margin-right: 100px;
-}
 
 .main-container .job-list .list-group-li .list-group-company{
-  width: 166px;
+  width: 250px;
   height: 50px;
   font-size: 17px;
   text-align: center;
+  margin-left: 13px;
 }
 
 .main-container .job-list .list-group-li .list-group-title{
@@ -172,4 +171,5 @@ footer,header,hgroup,main,nav,section{
   font-size: 17px;
   text-align: center;
   margin-right: 0;
+  margin-left: 30px;
 }
